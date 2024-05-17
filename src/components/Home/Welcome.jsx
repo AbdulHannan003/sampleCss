@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ReactTyped } from "react-typed";
-import web from '../assets/web.jpg'
+import web from '../../assets/web.jpg';
 
 function Welcome() {
     const typedRef = useRef();

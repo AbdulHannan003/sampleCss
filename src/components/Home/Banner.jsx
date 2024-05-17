@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactTyped } from "react-typed";
-import backgroundImage from '../assets/banner.jpg';
+import backgroundImage from '../../assets/banner.jpg';
 
 function Banner() {
     const divStyle = {
@@ -8,15 +8,15 @@ function Banner() {
     };
 
     return (
-        <div style={divStyle} className="w-full py-12 bg-cover bg-opacity-30 bg-no-repeat bg-center">
+        <div style={divStyle} className="w-full content-center bg-cover bg-opacity-30 bg-no-repeat bg-center h-[75vh]">
             <div className='text-center font-bold'>
-                <div className="md:text-3xl py-1  text-white text-lg md:py-3">
+                <div className="md:text-4xl text-lg py-1 text-white md:py-3">
                     we build
                 </div>
-                <div className="md:text-5xl py-1 text-2xl md:py-2 font-serif text-orange-500">
+                <div className="md:text-7xl text-2xl py-1 md:py-2 font-serif text-orange-500">
                     websites & much more.
                 </div>
-                <div className="text-white md:text-3xl py-1 text-lg md:py-3">
+                <div className="text-white md:text-4xl text-lg py-1 md:py-3">
                     We are here to <span> </span>
                     <ReactTyped
                         className='text-orange-500 md:text-3xl py-1 text-lg md:py-3'

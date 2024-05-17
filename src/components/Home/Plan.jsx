@@ -143,8 +143,8 @@ function Plan() {
     return (
 
         <motion.div
-            initial={{ opacity: 0, x: -250 }}
-            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -250 }}
+            initial={{ opacity: 0, y: 250 }}
+            animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 250 }}
             transition={{ duration: 1 }}
             className='py-10 px-2'
             ref={ref}

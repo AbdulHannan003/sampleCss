@@ -11,7 +11,7 @@ const Contact = () => {
                 </div>
                 <div className='p-4 mx-auto text-center col-span-1 w-3/4'>
                     <p className='text-lg'>We are here to help you.<br /> Feel free to contact us anytime. </p>
-                    <button className=' border-2 mx-auto md:px-12 border-orange-500 mt-4 px-4 flex flex-row py-1 rounded-full text-orange-500 hover:text-white hover:bg-[#f97316] duration-300 items-center'>Portfolio<span className='pl-2 text-2xl'><AiOutlinePhone /></span></button>
+                    <button className=' border-2 mx-auto md:px-12 border-orange-500 mt-4 px-4 flex flex-row py-1 rounded-full text-orange-500 hover:text-white hover:bg-[#f97316] duration-300 items-center'>Contact<span className='pl-2 text-2xl'><AiOutlinePhone /></span></button>
                 </div>
             </div>
         </div >
