@@ -63,7 +63,7 @@ const Design = () => {
     return (
         <div className='w-full'>
             <div className="max-w-[1240px] text-center p-0 mx-auto md:my-10 md:flex">
-                <div className="pt-[150px] my-2 text-primary md:flex  -rotate-[-90deg] text-7xl font-serif font-bold col-span-1 w-1/4 overflow-visible hidden ">
+                <div className="pt-[150px] my-2 text-[#5b2a86] md:flex  -rotate-[-90deg] text-7xl font-serif font-bold col-span-1 w-1/4 overflow-visible hidden ">
                     {letters1.map((letter, index) => (
                         <motion.span
                             key={index}
@@ -76,14 +76,14 @@ const Design = () => {
                     ))}
                 </div>
                 <div className=" text-center p-2 col-span-1 md:w-2/4">
-                    <h1 className="text-center py-4 md:text-4xl text-xl font-bold text-primary">
+                    <h1 className="text-center py-4 md:text-4xl text-xl font-bold text-[#5b2a86]">
                         Have a look at our work for our customers
                     </h1>
                     <p className="text-center py-4 md:text-lg">
                         We make sure to deliver high quality work for customers that is according to their demands. Catch a glimpse of our portfolio
                     </p>
                 </div>
-                <div className="pt-[140px] text-primary pl-[60px] md:inline  -rotate-90 text-7xl font-serif font-bold col-span-1 w-1/4 overflow-visible hidden ">
+                <div className="pt-[140px] text-[#5b2a86] pl-[60px] md:inline  -rotate-90 text-7xl font-serif font-bold col-span-1 w-1/4 overflow-visible hidden ">
                     {letters.map((letter, index) => (
 
                         <motion.span
@@ -100,19 +100,19 @@ const Design = () => {
             <div className="max-w-[1240px] mx-auto md:text-lg py-1 text-center md:py-3 flex justify-evenly">
                 <button
                     onClick={() => setProject('logo')}
-                    className='border-2 border-primary mt-4 px-4 py-1 rounded-full text-primary focus:bg-primary focus:text-white focus:shadow-lg font-bold'
+                    className='border-2 border-[#5b2a86] mt-4 px-4 py-1 rounded-full text-[#5b2a86] focus:bg-[#5b2a86] focus:text-white focus:shadow-lg font-bold'
                 >
                     Logo
                 </button>
                 <button
                     onClick={() => setProject('web')}
-                    className='border-2 border-primary mt-4 px-4 py-1 rounded-full text-primary focus:bg-primary focus:text-white focus:shadow-lg font-bold'
+                    className='border-2 border-[#5b2a86] mt-4 px-4 py-1 rounded-full text-[#5b2a86] focus:bg-[#5b2a86] focus:text-white focus:shadow-lg font-bold'
                 >
                     Web Design
                 </button>
                 <button
                     onClick={() => setProject('brand')}
-                    className='border-2 border-primary mt-4 px-4 py-1 rounded-full text-primary focus:bg-primary focus:text-white focus:shadow-lg font-bold'
+                    className='border-2 border-[#5b2a86] mt-4 px-4 py-1 rounded-full text-[#5b2a86] focus:bg-[#5b2a86] focus:text-white focus:shadow-lg font-bold'
                 >
                     Branding
                 </button>

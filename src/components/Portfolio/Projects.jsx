@@ -29,26 +29,26 @@ function Plan() {
 
         <div className='py-10 px-2'>
             <div className='max-w-[1240px] mx-auto p-4'>
-                <h1 className='font-serif text-orange-500 text-2xl md:text-5xl font-bold text-center'>Our Plans</h1>
+                <h1 className='font-serif text-[#662e9b] text-2xl md:text-5xl font-bold text-center'>Our Plans</h1>
                 <p className='text-center pt-4 md:text-lg font-bold'>Choose Your Plan</p>
-                <p className='text-center pt-2 text-orange-500 md:text-lg text-bold'>We Provide The Best Services For The Most Reasonable Price</p>
+                <p className='text-center pt-2 text-[#662e9b] md:text-lg text-bold'>We Provide The Best Services For The Most Reasonable Price</p>
             </div>
             <div className="max-w-[1240px] mx-auto md:text-lg py-1 text-center md:py-3 flex justify-evenly">
                 <button
                     onClick={() => setPlan('logo')}
-                    className='border-2 border-orange-500 mt-4 px-4 py-1 rounded-full text-orange-500 focus:bg-orange-500 focus:text-white focus:shadow-lg font-bold'
+                    className='border-2 border-[#662e9b] mt-4 px-4 py-1 rounded-full text-[#662e9b] focus:bg-[#662e9b] focus:text-white focus:shadow-lg font-bold'
                 >
                     Logo
                 </button>
                 <button
                     onClick={() => setPlan('web')}
-                    className='border-2 border-orange-500 mt-4 px-4 py-1 rounded-full text-orange-500 focus:bg-orange-500 focus:text-white focus:shadow-lg font-bold'
+                    className='border-2 border-[#662e9b] mt-4 px-4 py-1 rounded-full text-[#662e9b] focus:bg-[#662e9b] focus:text-white focus:shadow-lg font-bold'
                 >
                     Web Design
                 </button>
                 <button
                     onClick={() => setPlan('brand')}
-                    className='border-2 border-orange-500 mt-4 px-4 py-1 rounded-full text-orange-500 focus:bg-orange-500 focus:text-white focus:shadow-lg font-bold'
+                    className='border-2 border-[#662e9b] mt-4 px-4 py-1 rounded-full text-[#662e9b] focus:bg-[#662e9b] focus:text-white focus:shadow-lg font-bold'
                 >
                     Branding
                 </button>
@@ -66,14 +66,14 @@ function Plan() {
                                 {Object.keys(item).map((key, index) => {
                                     if (key === 'price' || key === 'title') return null
                                     return item[key] && <li key={index} className='text-lg md:text-md py-3 flex items-center'>
-                                        <span className='mr-2'><AiOutlineCheckCircle className='text-lg md:text-xl text-orange-500' /></span>
+                                        <span className='mr-2'><AiOutlineCheckCircle className='text-lg md:text-xl text-[#662e9b]' /></span>
                                         {item[key]}
                                     </li>
                                 })}
                             </ul>
                         </div>
                         <div className='text-center mt-auto '>
-                            <button className='border-2 border-orange-500 mt-4 px-4 py-1 rounded-full text-orange-500 hover:text-white hover:bg-[#f97316] duration-300'>Get Quote</button>
+                            <button className='border-2 border-[#662e9b] mt-4 px-4 py-1 rounded-full text-[#662e9b] hover:text-white hover:bg-[#f97316] duration-300'>Get Quote</button>
                         </div>
                     </div>
                 ))}
