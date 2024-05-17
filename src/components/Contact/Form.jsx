@@ -3,19 +3,19 @@ import React from 'react'
 const Form = () => {
     return (
         <>
-            <div className='max-w-[1240px] justify-around px-4 py-10 flex mx-auto'>
-                <div className='p-2 md:w-1/2 py-24 h-auto'>
+            <div className='max-w-[1240px] justify-around px-4 py-10 md:flex mx-auto'>
+                <div className='p-2 w-full md:w-1/2 py-24 h-auto'>
                     <p className='text-xl font-bold'>Contact us</p>
-                    <h1 className='text-3xl p-2 italic text-center font-bold my-2 text-white-100 bg-primary rounded-xl shadow-xl font-serif'>"Don't Wait, Create Your Success"</h1>
+                    <h1 className='text-3xl p-2 italic text-center font-bold my-2 text-white-100 bg-[#662e9b] rounded-xl shadow-xl font-serif'>"Don't Wait, Create Your Success"</h1>
                 </div>
-                <form className="md:w-1/2 mx-[80px] p-4 pt-6 mb-4 border-primary border-2 rounded-xl hover:scale-105 duration-300 hover:shadow-2xl">
-                    <div className="flex flex-wrap -mx-3 mb-6">
+                <form className="w-full md:w-1/2 md:mx-[80px] p-4 pt-6 mb-4 border-[#662e9b] border-2 rounded-xl hover:scale-105 duration-300 hover:shadow-2xl">
+                    <div className="flex flex-wrap mb-6">
                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="first-name">
                                 First Name*
                             </label>
                             <input
-                                className="appearance-none block w-full bg-primaryLight text-gray-700 border border-primary rounded py-3 px-4 leading-tight focus:outline-none focus:bg-primaryLight-100"
+                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-700 border border-[#662e9b] rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
                                 id="first-name"
                                 type="text"
                                 required
@@ -26,58 +26,58 @@ const Form = () => {
                                 Last Name*
                             </label>
                             <input
-                                className="appearance-none block w-full bg-primaryLight text-gray-700 border border-primary rounded py-3 px-4 leading-tight focus:outline-none focus:bg-primaryLight-100"
+                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-700 border border-[#662e9b] rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
                                 id="last-name"
                                 type="text"
                                 required
                             />
                         </div>
                     </div>
-                    <div className="flex flex-wrap -mx-3 mb-6">
+                    <div className="flex flex-wrap  mb-6">
                         <div className="w-full px-3">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="company">
                                 Company
                             </label>
                             <input
-                                className="appearance-none block w-full bg-primaryLight text-gray-700 border border-primary rounded py-3 px-4 leading-tight focus:outline-none focus:bg-primaryLight-100"
+                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-700 border border-[#662e9b] rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
                                 id="company"
                                 type="text"
                             />
                         </div>
                     </div>
-                    <div className="flex flex-wrap -mx-3 mb-6">
+                    <div className="flex flex-wrap  mb-6">
                         <div className="w-full px-3">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="email">
                                 Email
                             </label>
                             <input
-                                className="appearance-none block w-full bg-primaryLight text-gray-700 border border-primary rounded py-3 px-4 leading-tight focus:outline-none focus:bg-primaryLight-100"
+                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-700 border border-[#662e9b] rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
                                 id="email"
                                 type="email"
                                 required
                             />
                         </div>
                     </div>
-                    <div className="flex flex-wrap -mx-3 mb-6">
+                    <div className="flex flex-wrap  mb-6">
                         <div className="w-full px-3">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="phone">
                                 Phone
                             </label>
                             <input
-                                className="appearance-none block w-full bg-primaryLight text-gray-700 border border-primary rounded py-3 px-4 leading-tight focus:outline-none focus:bg-primary-100"
+                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-700 border border-[#662e9b] rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]-100"
                                 id="phone"
                                 type="tel"
                             />
                         </div>
                     </div>
-                    <div className="flex flex-wrap -mx-3 mb-6">
+                    <div className="flex flex-wrap  mb-6">
                         <div className="w-full px-3">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="how-did-you-hear-about-us">
                                 How did you hear about us?
                             </label>
                             <div className="relative">
                                 <select
-                                    className="block appearance-none w-full bg-primaryLight border border-primary text-gray-700 py-3 px-4 pr-8 roundedleading-tight focus:outline-none focus:bg-primaryLight-100"
+                                    className="block appearance-none w-full bg-[#662e9b]Light border border-[#662e9b] text-gray-700 py-3 px-4 pr-8 roundedleading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
                                     id="how-did-you-hear-about-us"
                                     required
                                 >
@@ -99,20 +99,20 @@ const Form = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-wrap -mx-3 mb-6">
+                    <div className="flex flex-wrap  mb-6">
                         <div className="w-full px-3">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="message">
                                 Message*
                             </label>
                             <textarea
-                                className="block w-full bg-primaryLight text-gray-700 border border-primary rounded py-3 px-4 leading-tight focus:outline-none focus:bg-primaryLight-100"
+                                className="block w-full bg-[#662e9b]Light text-gray-700 border border-[#662e9b] rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
                                 id="message"
                                 required
                             />
                         </div>
                     </div>
                     <div className="text-white-100 flex justify-center px-12 md:text-lg py-1  ">
-                        <button className='border-2 border-primary px-12 py-2 rounded-full text-primary hover:text-white-100 hover:bg-primary-700 duration-300'>Get Started</button>
+                        <button className='border-2 border-[#662e9b] px-12 py-2 rounded-full text-[#662e9b] hover:text-white-100 hover:bg-[#662e9b]-700 duration-300'>Get Started</button>
                     </div>
                 </form>
             </div>

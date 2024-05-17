@@ -22,7 +22,7 @@ const Tools = () => {
     });
     return (
         <div className='max-w-[1240px] px-4 py-10 md:mx-auto text-center' ref={ref}>
-            <div className='text-primary font-bold md:text-4xl py-1 text-lg md:py-3 md:flex justify-center' ref={typedRef}>
+            <div className='text-[#662e9b] font-bold md:text-4xl py-1 text-lg md:py-3 md:flex justify-center' ref={typedRef}>
                 <h1 className='text-lg md:text-4xl py-4 md:text-left text-black font-semibold'>Empowering Businesses with a</h1>
                 {inView && (
                     <ReactTyped
@@ -34,7 +34,7 @@ const Tools = () => {
             </div>
             <div className='font-semibold p-4 md:text-4xl py-1 text-lg md:py-3 justify-center'>
                 <h1 className='pb-1'>Frameworks</h1>
-                <div className='border-2 w-2/12 border-primary my-1 mx-auto'></div>
+                <div className='border-2 w-2/12 border-[#662e9b] my-1 mx-auto'></div>
                 <div className='mx-auto flex py-10 my-6 md:my-10'>
                     <div className='flex justify-around gap-4 w-full'>
                         <div className='h-[60px] w-[60px]'>
@@ -60,7 +60,7 @@ const Tools = () => {
                     </div>
                 </div>
                 <h1 className='pb-1'>Languages</h1>
-                <div className='border-2 w-2/12 border-primary my-1 mx-auto'></div>
+                <div className='border-2 w-2/12 border-[#662e9b] my-1 mx-auto'></div>
                 <div className='mx-auto flex py-10 my-6 md:my-10'>
                     <div className='flex justify-around gap-4 w-full'>
                         <div className='h-[60px] w-[60px]'>
@@ -82,7 +82,7 @@ const Tools = () => {
                     </div>
                 </div>
                 <h1 className='pb-1'>Design</h1>
-                <div className='border-2 w-2/12 border-primary my-1 mx-auto'></div>
+                <div className='border-2 w-2/12 border-[#662e9b] my-1 mx-auto'></div>
                 <div className='mx-auto flex py-10 my-6 md:my-10'>
                     <div className='flex justify-around gap-4 w-full'>
                         <div className='h-[60px] w-[60px]'>

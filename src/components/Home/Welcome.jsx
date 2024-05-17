@@ -16,7 +16,7 @@ function Welcome() {
                 <img src={web} alt="" className='object-cover object-center' />
             </div>
             <div className='col-span-1 p-4 flex flex-col justify-center' ref={ref}>
-                <div className='text-primary font-bold md:text-3xl py-1 text-xl md:py-3' ref={typedRef}>
+                <div className='text-[#662e9b] font-bold md:text-3xl py-1 text-xl md:py-3' ref={typedRef}>
                     {inView && (
                         <ReactTyped
                             strings={["Welcome to the next level !"]}

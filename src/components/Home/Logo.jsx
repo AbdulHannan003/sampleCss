@@ -27,7 +27,7 @@ const Logo = () => {
     return (
         <div className="bg-gray-400 bg-opacity-10 overflow-hidden py-2">
             <div className='w-m-[1024px] text-xl md:text-4xl md:w-[60%] mx-auto'>
-                <h1 className='font-bold px-4 md:px-0 py-10 text-center'>Crafting <span className='text-primary'>Solutions</span>! Not Just Products, for Your Business</h1>
+                <h1 className='font-bold px-4 md:px-0 py-10 text-center'>Crafting <span className='text-[#662e9b]'>Solutions</span>! Not Just Products, for Your Business</h1>
                 <div className='flex flex-col-4 text-center gap-2 justify-between p-4'>
                     <div ref={aiRef}>
                         <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={aiInView ? "visible" : "hidden"} variants={popVariants}>
