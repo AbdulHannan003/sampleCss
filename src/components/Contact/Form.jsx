@@ -6,9 +6,9 @@ const Form = () => {
             <div className='max-w-[1240px] justify-around px-4 py-10 flex mx-auto'>
                 <div className='p-2 md:w-1/2 py-24 h-auto'>
                     <p className='text-xl font-bold'>Contact us</p>
-                    <h1 className='text-3xl p-2 italic font-bold my-2 text-primary'>Don't Wait, Create Your Success</h1>
+                    <h1 className='text-3xl p-2 italic text-center font-bold my-2 text-white-100 bg-primary rounded-xl shadow-xl font-serif'>"Don't Wait, Create Your Success"</h1>
                 </div>
-                <form className="md:w-1/2 mx-[80px] p-4 pt-6 mb-4 border-primary border rounded-xl hover:scale-105 duration-300 hover:shadow-2xl">
+                <form className="md:w-1/2 mx-[80px] p-4 pt-6 mb-4 border-primary border-2 rounded-xl hover:scale-105 duration-300 hover:shadow-2xl">
                     <div className="flex flex-wrap -mx-3 mb-6">
                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="first-name">
@@ -26,7 +26,7 @@ const Form = () => {
                                 Last Name*
                             </label>
                             <input
-                                className="appearance-none block w-full bg-primaryLight text-gray-700 border border-primary rounded py-3 px-4 leading-tight focus:outline-none focus:bg-primaryLight100"
+                                className="appearance-none block w-full bg-primaryLight text-gray-700 border border-primary rounded py-3 px-4 leading-tight focus:outline-none focus:bg-primaryLight-100"
                                 id="last-name"
                                 type="text"
                                 required
