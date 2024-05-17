@@ -9,7 +9,7 @@ function Banner() {
     return (
         <div
             style={divStyle}
-            className="w-full h-[300px] md:h-[80vh] bg-cover bg-no-repeat bg-center md:flex md:justify-end">
+            className="w-full h-[300px] md:h-[80vh] bg-cover bg-no-repeat  bg-center flex md:justify-end">
             <div className="max-w-[1240px] text-left font-bold self-center w-full md:w-auto">
                 <div className='col-span-1 md:w-4/4 px-10'>
                     <div className="md:text-4xl text-lg text-white pl-4 md:py-3">
@@ -28,7 +28,7 @@ function Banner() {
                             backSpeed={50}
                         ></ReactTyped>
                     </div>
-                    <div className="items-center text-white md:text-lg py-1 md:py-3">
+                    <div className="items-center text-white md:text-lg pl-4 py-1 md:py-3">
                         <button className='border-2 border-[#009d96] mt-4 px-4 py-1 rounded-full text-[#009d96] hover:text-white hover:bg-[#009d96] duration-300'>Get Started</button>
                     </div>
                 </div>

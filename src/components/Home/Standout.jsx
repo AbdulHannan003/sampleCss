@@ -13,14 +13,14 @@ const Standout = () => {
                 <h3 className='text-xl md:text-4xl font-semibold px-4 md:px-12'>No Reloads</h3>
                 <motion.div initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -250 }}
-                    transition={{ duration: 1 }} ref={ref} className='text-orange-500 text-4xl md:text-7xl font-bold font-sans'> Just React!</motion.div>
+                    transition={{ duration: 1 }} ref={ref} className='text-primary text-4xl md:text-7xl font-bold font-sans'> Just React!</motion.div>
                 <p className='py-6 px-4 md:px-12 text-lg md:text-xl md:w-3/4'>
                     Maintaining continious interactivity without page reloads? You bet! With React, We keep web experience
                     alive and dynamic, emsuring user are engaged and delighted every step of the way.
                     <span className='hidden sm:inline'>
                         From seamless transitions to interactive elements, our expertise in React ensures your business shine with modernity and sophistication.
                     </span>
-                    <button className=' border-2 md:px-12 border-orange-500 mt-4 px-4 flex flex-row py-1 rounded-full text-orange-500 hover:text-white hover:bg-[#f97316] duration-300 items-center'>Portfolio<span className='pl-2'><AiFillCaretRight /></span></button>
+                    <button className=' border-2 md:px-12 border-primary mt-4 px-4 flex flex-row py-1 rounded-full text-primary hover:text-white hover:bg-primary duration-300 items-center'>Portfolio<span className='pl-2'><AiFillCaretRight /></span></button>
                 </p>
             </div>
             <div className='md:w-[90%] mx-auto'>

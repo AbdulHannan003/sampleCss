@@ -4,7 +4,7 @@ import backgroundImage from '../../assets/banner.jpg';
 
 function Banner() {
     const divStyle = {
-        backgroundImage: `linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)), url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0)), url(${backgroundImage})`,
     };
 
     return (
@@ -13,13 +13,13 @@ function Banner() {
                 <div className="md:text-4xl text-lg py-1 text-white md:py-3">
                     check out
                 </div>
-                <div className="md:text-7xl text-2xl py-1 md:py-2 font-serif text-orange-500">
+                <div className="md:text-7xl text-2xl py-1 md:py-2 font-serif text-primary">
                     our work
                 </div>
                 <div className="text-white md:text-4xl text-lg py-1 md:py-3">
                     We are here to <span> </span>
                     <ReactTyped
-                        className='text-orange-500 md:text-3xl py-1 text-lg md:py-3'
+                        className='text-primary md:text-3xl py-1 text-lg md:py-3'
                         strings={[
                             "Providing stable and sustainable solutions",
                         ]}
@@ -28,7 +28,7 @@ function Banner() {
                     ></ReactTyped>
                 </div>
                 <div className="text-white md:text-lg py-1 md:py-3 ">
-                    <button className='border-2 border-orange-500 mt-4 px-4 py-1 rounded-full text-orange-500 hover:text-white hover:bg-[#f97316] duration-300'>Get Started</button>
+                    <button className='border-2 border-primary mt-4 px-4 py-1 rounded-full text-primary hover:text-white hover:bg-[#f97316] duration-300'>Get Started</button>
                 </div>
             </div>
         </div>
