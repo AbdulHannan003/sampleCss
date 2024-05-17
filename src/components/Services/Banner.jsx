@@ -4,7 +4,7 @@ import backgroundImage from '../../assets/servicebanner.png';
 
 function Banner() {
     const divStyle = {
-        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0)), linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0)) , url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.3)), linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3)) , url(${backgroundImage})`,
     };
     return (
         <div
