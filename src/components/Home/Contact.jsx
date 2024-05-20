@@ -14,7 +14,7 @@ const Contact = () => {
         <div className=' w-max-[1240px] h-auto'>
             <div className='w-max-[1024px] py-10 md:grid justify-around md:grid-cols-2'>
                 <div className='col-span-1 md:mx-auto p-4 flex flex-col justify-center'>
-                    <p className='text-xl font-bold'>Contact us</p>
+                    <p className='text-xl font-bold text-black'>Contact us</p>
                     <h1 className='text-3xl p-2 italic font-bold my-2  text-[#662e9b]'>Don't Wait, Create Your Success</h1>
                 </div>
                 <div className='p-4 mx-auto text-center col-span-1 w-3/4'>

@@ -12,7 +12,7 @@ function Footer() {
         <div className='bg-[#662e9b] p-4'>
             <div className='max-w-[1240px] items-center py-2 flex justify-between mx-auto'>
                 <div className='text-white'>
-                    &copy; {new Date().getFullYear()} SASKA Solution. All rights reserved.
+                    &copy; {new Date().getFullYear()} SASKA Solutions. All rights reserved.
                 </div>
                 <ul className='hidden md:flex text-white gap-5'>
                     <li>

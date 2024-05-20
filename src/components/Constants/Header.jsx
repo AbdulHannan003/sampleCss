@@ -72,7 +72,7 @@ function Header() {
                     </motion.div>
                     <motion.div className='h-[50px] border-x-2  hidden md:flex border-white-100 mx-2' variants={itemVariants} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}></motion.div>
                     <motion.div className='content-center text-3xl text-white-100 font-bold hidden md:flex' variants={solutionVariant} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}>
-                        SASKA Solution
+                        SASKA Solutions
                     </motion.div>
                 </motion.div>
                 {

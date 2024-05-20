@@ -33,7 +33,7 @@ const Tools = () => {
                 )}
             </div>
             <div className='font-semibold p-4 md:text-4xl py-1 text-lg md:py-3 justify-center'>
-                <h1 className='pb-1'>Frameworks</h1>
+                <h1 className='pb-1 text-black'>Frameworks</h1>
                 <div className='border-2 w-2/12 border-[#662e9b] my-1 mx-auto'></div>
                 <div className='mx-auto flex py-10 my-6 md:my-10'>
                     <div className='flex justify-around gap-4 w-full'>
@@ -59,7 +59,7 @@ const Tools = () => {
                         </div>
                     </div>
                 </div>
-                <h1 className='pb-1'>Languages</h1>
+                <h1 className='pb-1 text-black'>Languages</h1>
                 <div className='border-2 w-2/12 border-[#662e9b] my-1 mx-auto'></div>
                 <div className='mx-auto flex py-10 my-6 md:my-10'>
                     <div className='flex justify-around gap-4 w-full'>
@@ -81,7 +81,7 @@ const Tools = () => {
                         </div>
                     </div>
                 </div>
-                <h1 className='pb-1'>Design</h1>
+                <h1 className='pb-1 text-black'>Design</h1>
                 <div className='border-2 w-2/12 border-[#662e9b] my-1 mx-auto'></div>
                 <div className='mx-auto flex py-10 my-6 md:my-10'>
                     <div className='flex justify-around gap-4 w-full'>

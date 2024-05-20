@@ -11,7 +11,7 @@ const Standout = () => {
     return (
         <div className='max-w-[1240px] p-4 mx-auto'>
             <div className='md:w-[90%] md:pt-10 mx-auto'>
-                <h3 className='text-xl md:text-4xl font-semibold px-4 md:px-12'>No Reloads</h3>
+                <h3 className='text-xl md:text-4xl font-semibold px-4 md:px-12 text-black'>No Reloads</h3>
                 <motion.div initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -250 }}
                     transition={{ duration: 1 }} ref={ref} className='text-[#662e9b] text-4xl md:text-7xl font-bold font-sans'> Just React!</motion.div>
