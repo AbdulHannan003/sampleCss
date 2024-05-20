@@ -57,22 +57,22 @@ function Header() {
 
 
     return (
-        <div className='bg-transparent absolute p-4 w-full'>
-            <div className='max-w-[1240px] items-center py-2 flex justify-between mx-auto'>
+        <div className='bg-[#662e9b] bg-opacity-30 absolute px-2 md:py-1 w-full '>
+            <div className='max-w-[1240px] items-center md:py-2 flex justify-between mx-auto'>
                 <motion.div
-                    className='flex'
+                    className='flex my-auto'
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
                 >
-                    <motion.div className='w-[55px] h-[55px]' variants={itemVariants}>
-                        <motion.div className='w-[55px] h-[55px]' variants={logoVariant} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}>
-                            <img src={saskaLogo} alt="" className='h-full w-full  content-center ' />
+                    <motion.div className='w-[55px] h-[55px] flex' variants={itemVariants}>
+                        <motion.div className='w-[30px] mx-auto self-center md:w-[55px] h-[30px] md:h-[55px]' variants={logoVariant} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}>
+                            <img src={saskaLogo} alt="" className='h-full w-full content-center ' />
                         </motion.div>
                     </motion.div>
                     <motion.div className='h-[50px] border-x-2  hidden md:flex border-white-100 mx-2' variants={itemVariants} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}></motion.div>
-                    <motion.div className='content-center text-3xl text-white-100 font-bold hidden md:flex' variants={solutionVariant} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}>
-                        SASKA Solution
+                    <motion.div className='content-center text-3xl text-white-100 font-bold hidden md:flex self-center' variants={solutionVariant} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}>
+                        SASKA Solutions
                     </motion.div>
                 </motion.div>
                 {
@@ -89,7 +89,7 @@ function Header() {
                     ))}
                 </ul>
                 {/* responsive menu */}
-                <ul className={`duration-500 md:hidden w-full fixed h-screen bg-[#662e9b] text-white-100 gap-5 top-[84px] ${toggle ? 'left-[0]' : 'left-[-100%]'}`}>
+                <ul className={`duration-500 md:hidden w-full fixed h-screen bg-[#662e9b] text-white-100 gap-5 top-[45px] ${toggle ? 'left-[0]' : 'left-[-100%]'}`}>
                     {links.map((items, i) => (
                         <li key={i}>
                             <Link className='flex justify-center text-lg py-5' onClick={() => setToggle(!toggle)} to={items.path}>{items.link}</Link>

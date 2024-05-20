@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useNavigate } from 'react-router-dom';
 
 function Plan() {
     const [plan, setPlan] = useState('logo');
@@ -9,6 +10,12 @@ function Plan() {
     const { ref, inView } = useInView({
         triggerOnce: true,
     });
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/contact');
+    };
 
     const logoPlanData = [{
         price: "$30",
@@ -149,9 +156,9 @@ function Plan() {
             className='py-10 px-2'
             ref={ref}
         >
-            <div className='max-w-[1240px] mx-auto p-4'>
+            <div id='plan' className='max-w-[1240px] mx-auto p-4'>
                 <h1 className='font-serif text-[#662e9b] text-2xl md:text-5xl font-bold text-center'>Our Plans</h1>
-                <p className='text-center pt-4 md:text-lg font-bold'>Choose Your Plan</p>
+                <p className='text-center pt-4 md:text-lg font-bold text-black'>Choose Your Plan</p>
                 <p className='text-center pt-2 text-[#662e9b] md:text-lg text-bold'>We Provide The Best Services For The Most Reasonable Price</p>
             </div>
             <div className="max-w-[1240px] mx-auto md:text-lg py-1 text-center md:py-3 flex justify-evenly">
@@ -178,9 +185,9 @@ function Plan() {
             <div className="max-w-[1240px] mx-auto p-4 md:grid grid-cols-3 gap-8">
                 {inView && planData.map((item, index) => (
                     <div key={index} className="flex flex-col sm:mx-2 shadow-xl h-auto rounded-xl px-4 py-12 border border-[#662e9b] my-5 hover:shadow-2xl hover:scale-105 duration-500">
-                        <span className='text-6xl md:text-2xl font-bold'>{item.price}</span>
+                        <span className='text-6xl md:text-2xl font-bold text-black'>{item.price}</span>
                         <div className='my-4 border-y-2 border-gray-300'>
-                            <h2 className='text-lg md:text-xl py-4 font-bold'>{item.title}</h2>
+                            <h2 className='text-lg md:text-xl py-4 font-bold text-black'>{item.title}</h2>
                         </div>
                         <div>
                             <ul>
@@ -194,7 +201,7 @@ function Plan() {
                             </ul>
                         </div>
                         <div className='text-center mt-auto '>
-                            <button className='border-2 border-[#662e9b] mt-4 px-4 py-1 rounded-full text-[#662e9b] hover:text-white hover:bg-[#662e9b] duration-300'>Get Quote</button>
+                            <button onClick={handleClick} className='border-2 border-[#662e9b] mt-4 px-4 py-1 rounded-full text-[#662e9b] hover:text-white hover:bg-[#662e9b] duration-300'>Get Quote</button>
                         </div>
                     </div>
                 ))}

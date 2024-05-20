@@ -12,7 +12,7 @@ function Welcome() {
 
     return (
         <div className='max-w-[1240] p-4 mx-auto md:my-10 md:grid grid-cols-2'>
-            <div className='col-span-1 md:w-[80%] h-96 md:overflow-visible mx-auto'>
+            <div className='col-span-1 md:w-[80%] h-96 overflow-hidden md:overflow-visible mx-auto'>
                 <img src={web} alt="" className='object-cover object-center' />
             </div>
             <div className='col-span-1 p-4 flex flex-col justify-center' ref={ref}>
@@ -25,10 +25,10 @@ function Welcome() {
                     )}
                 </div>
                 <div className='py-4'>
-                    <span className='text-black text-sm line-clamp-3'>
+                    <span className='text-base line-clamp-3'>
                         SASKA Solutions is a technology consultancy and solutions provider company, offering expert services in front-end and back-end development, UI and UX design, and automation solutions.
                     </span>
-                    <span className='pt-5 text-black text-sm line-clamp-3'>
+                    <span className='pt-5 text-base line-clamp-3'>
                         Our mission is to empower businesses to succeed in the digital age by providing innovative, effective, and efficient technology solutions.
                     </span>
                 </div>

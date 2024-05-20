@@ -42,8 +42,8 @@ const Provide = () => {
 
   return (
     <div className='max-w-[1240px] px-4 py-10 mx-auto' ref={ref}>
-      <h1 className='text-lg md:text-3xl py-4 text-left text-[#662e9b]'>Our Services</h1>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:py-0 pb-12'>
+      <h1 className='text-lg md:text-3xl py-4 text-left text-black font-semibold'>Our Services</h1>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:py-0 pb-8'>
         <motion.div className='w-full col-span-1 flex gap-8 md:flex'
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -52,11 +52,11 @@ const Provide = () => {
             className='w-2/4 p-4 md:mx-8 hover:scale-110 hover:shadow-2xl duration-300'
             variants={itemVariants}
           >
-            <h1 className='text-lg md:text-3xl font-semibold'>Develop :</h1>
-            <div className='border-2 w-2/12 border-[#662e9b] my-1'></div>
+            <h1 className='text-lg md:text-3xl text-[#662e9b] font-semibold'>Develop :</h1>
+            <div className='border-2 w-2/12 border-black my-1'></div>
             <ul className='mt-2 px-5'>
               {DevServices.map((service, index) => (
-                <motion.li key={index} variants={itemVariants}>{service}</motion.li>
+                <motion.li key={index} className='py-1' variants={itemVariants}>{service}</motion.li>
               ))}
             </ul>
           </motion.div>
@@ -64,11 +64,11 @@ const Provide = () => {
             className='w-2/4 p-4 md:mx-8 hover:scale-110 hover:shadow-2xl duration-300'
             variants={itemVariants}
           >
-            <h1 className='text-lg md:text-3xl font-semibold'>Design :</h1>
-            <div className='border-2 w-2/12 border-[#662e9b] my-1'></div>
+            <h1 className='text-lg md:text-3xl text-[#662e9b] font-semibold'>Design :</h1>
+            <div className='border-2 w-2/12 border-black my-1'></div>
             <ul className='mt-2 px-5'>
               {DesServices.map((service, index) => (
-                <motion.li key={index} variants={itemVariants}>{service}</motion.li>
+                <motion.li key={index} className='py-1' variants={itemVariants}>{service}</motion.li>
               ))}
             </ul>
           </motion.div>

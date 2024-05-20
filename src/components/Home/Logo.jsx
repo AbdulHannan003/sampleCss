@@ -27,7 +27,7 @@ const Logo = () => {
     return (
         <div className="bg-gray-400 bg-opacity-10 overflow-hidden py-2">
             <div className='w-m-[1024px] text-xl md:text-4xl md:w-[60%] mx-auto'>
-                <h1 className='font-bold px-4 md:px-0 py-10 text-center'>Crafting <span className='text-[#662e9b]'>Solutions</span>! Not Just Products, for Your Business</h1>
+                <h1 className='font-bold px-4 md:px-0 py-10 text-center text-black'>Crafting <span className='text-[#662e9b]'>Solutions</span>! Not Just Products, for Your Business</h1>
                 <div className='flex flex-col-4 text-center gap-2 justify-between p-4'>
                     <div ref={aiRef}>
                         <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={aiInView ? "visible" : "hidden"} variants={popVariants}>
@@ -35,7 +35,7 @@ const Logo = () => {
                                 <img src={ai} className='w-full h-full object-contain hover:scale-125 duration-200' alt="" />
                             </div>
                         </motion.div>
-                        <span className='text-lg'>React</span>
+                        <span className='text-sm text-gray-500 italic font-semibold'>React</span>
                     </div>
                     <div ref={cssRef}>
                         <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={cssInView ? "visible" : "hidden"} variants={popVariants}>
@@ -43,7 +43,7 @@ const Logo = () => {
                                 <img src={css} className='w-full h-full object-contain hover:scale-125 duration-200' alt="" />
                             </div>
                         </motion.div>
-                        <span className='text-lg'>CSS</span>
+                        <span className='text-sm text-gray-500 italic font-semibold'>CSS</span>
                     </div>
                     <div ref={html5Ref}>
                         <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={html5InView ? "visible" : "hidden"} variants={popVariants}>
@@ -51,7 +51,7 @@ const Logo = () => {
                                 <img src={html5} className='w-full h-full object-contain hover:scale-125 duration-200' alt="" />
                             </div>
                         </motion.div>
-                        <span className='text-lg'>HTML5</span>
+                        <span className='text-sm text-gray-500 italic font-semibold'>HTML5</span>
                     </div>
                     <div ref={mongoRef}>
                         <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={mongoInView ? "visible" : "hidden"} variants={popVariants}>
@@ -59,7 +59,7 @@ const Logo = () => {
                                 <img src={mongo} className='w-full h-full object-contain hover:scale-125 duration-200' alt="" />
                             </div>
                         </motion.div>
-                        <span className='text-lg'>MongoDB</span>
+                        <span className='text-sm text-gray-500 italic font-semibold'>MongoDB</span>
                     </div>
                 </div>
                 <div className='flex flex-col-4 text-center gap-2 justify-between p-4'>
@@ -69,7 +69,7 @@ const Logo = () => {
                                 <img src={node} className='w-full h-full object-contain hover:scale-125 duration-200' alt="" />
                             </div>
                         </motion.div>
-                        <span className='text-lg'>Node JS</span>
+                        <span className='text-sm text-gray-500 italic font-semibold'>Node JS</span>
                     </div>
                     <div ref={psRef}>
                         <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={psInView ? "visible" : "hidden"} variants={popVariants}>
@@ -77,7 +77,7 @@ const Logo = () => {
                                 <img src={ps} className='w-full h-full object-contain hover:scale-125 duration-200' alt="" />
                             </div>
                         </motion.div>
-                        <span className='text-lg'>Photoshop</span>
+                        <span className='text-sm text-gray-500 italic font-semibold'>Photoshop</span>
                     </div>
                     <div ref={reactRef}>
                         <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={reactInView ? "visible" : "hidden"} variants={popVariants}>
@@ -85,7 +85,7 @@ const Logo = () => {
                                 <img src={react} className='w-full h-full object-contain hover:scale-125 duration-200' alt="" />
                             </div>
                         </motion.div>
-                        <span className='text-lg'>Illustrator</span>
+                        <span className='text-sm text-gray-500 italic font-semibold'>Illustrator</span>
                     </div>
                     <div ref={tailwindRef}>
                         <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={tailwindInView ? "visible" : "hidden"} variants={popVariants}>
@@ -93,7 +93,7 @@ const Logo = () => {
                                 <img src={tailwind} className='w-full h-full object-contain hover:scale-125 duration-200' alt="" />
                             </div>
                         </motion.div>
-                        <span className='text-lg'>Tailwind CSS</span>
+                        <span className='text-sm text-gray-500 italic font-semibold'>Tailwind CSS</span>
                     </div>
                 </div>
             </div>
