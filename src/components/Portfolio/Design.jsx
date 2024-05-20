@@ -37,30 +37,27 @@ const Design = () => {
     ]
 
     const webProjects = [{
-        url: "https://images.pexels.com/photos/1961778/pexels-photo-1961778.jpeg?auto=compress&cs=tinysrgb&w=600",
-        alt: "Web Projects",
+        url: "src/assets/PortfolioWeb/dashboardTemplate.png",
+        alt: "Dashboard Template",
     },
     {
-        url: "https://images.pexels.com/photos/1961778/pexels-photo-1961778.jpeg?auto=compress&cs=tinysrgb&w=600",
-        alt: "Web Projects",
+        url: "src/assets/PortfolioWeb/websiteTemplate.png",
+        alt: "Web Templates",
     },
     {
-        url: "https://images.pexels.com/photos/1961778/pexels-photo-1961778.jpeg?auto=compress&cs=tinysrgb&w=600",
-        alt: "Web Projects",
-    }
+        url: "src/assets/PortfolioWeb/Webtemplate.png",
+        alt: "Web Template",
+    },
+
     ]
     const brandProjects = [{
-        url: "https://images.pexels.com/photos/1961795/pexels-photo-1961795.jpeg?auto=compress&cs=tinysrgb&w=600",
-        alt: "Logo Design",
+        url: "src/assets/PortfolioBrands/Banners.png",
+        alt: "AD Banners",
     },
     {
-        url: "https://images.pexels.com/photos/1961795/pexels-photo-1961795.jpeg?auto=compress&cs=tinysrgb&w=600",
-        alt: "Logo Design",
+        url: "src/assets/PortfolioBrands/Standee.png",
+        alt: "Standee",
     },
-    {
-        url: "https://images.pexels.com/photos/1961795/pexels-photo-1961795.jpeg?auto=compress&cs=tinysrgb&w=600",
-        alt: "Logo Design",
-    }
     ]
 
     let projectData;
@@ -131,13 +128,12 @@ const Design = () => {
             </div>
             <div className='w-full grid md:grid-cols-3'>
                 {projectData.map((project, index) => (
-                    <div key={index} className='col-span-1 border shadow-xl overflow-hidden'>
+                    <div key={index} className='col-span-1 border shadow-xl max-h-[900px] overflow-hidden'>
                         <img src={project.url} alt={project.alt} className='w-full object-center hover:scale-110 duration-200' />
                     </div>
                 ))}
             </div>
         </div>
-
     );
 };
 

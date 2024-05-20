@@ -43,7 +43,7 @@ const Provide = () => {
   return (
     <div className='max-w-[1240px] px-4 py-10 mx-auto' ref={ref}>
       <h1 className='text-lg md:text-3xl py-4 text-left text-black font-semibold'>Our Services</h1>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:py-0 pb-12'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:py-0 pb-8'>
         <motion.div className='w-full col-span-1 flex gap-8 md:flex'
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
