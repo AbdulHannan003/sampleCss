@@ -31,7 +31,7 @@ function Banner() {
                     ></ReactTyped>
                 </div>
                 <div className="text-white-100 md:w-2/4 px-12 md:text-lg py-1 md:py-12 ">
-                    <button className='border-2 border-[#662e9b] mt-4 px-4 py-1 rounded-full text-[#662e9b] hover:text-white-100 hover:bg-[#662e9b] duration-300'>Get Started</button>
+                    <button className='border-2 border-[#662e9b] mt-4 px-4 py-1 rounded-full text-[#662e9b] hover:text-white-100 hover:bg-[#662e9b] duration-300'> <a href="#plan">Get Started</a> </button>
                 </div>
             </div>
         </div>

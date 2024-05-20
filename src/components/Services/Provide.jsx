@@ -56,7 +56,7 @@ const Provide = () => {
             <div className='border-2 w-2/12 border-[#662e9b] my-1'></div>
             <ul className='mt-2 px-5'>
               {DevServices.map((service, index) => (
-                <motion.li key={index} variants={itemVariants}>{service}</motion.li>
+                <motion.li key={index} className='py-1' variants={itemVariants}>{service}</motion.li>
               ))}
             </ul>
           </motion.div>
@@ -68,7 +68,7 @@ const Provide = () => {
             <div className='border-2 w-2/12 border-[#662e9b] my-1'></div>
             <ul className='mt-2 px-5'>
               {DesServices.map((service, index) => (
-                <motion.li key={index} variants={itemVariants}>{service}</motion.li>
+                <motion.li key={index} className='py-1' variants={itemVariants}>{service}</motion.li>
               ))}
             </ul>
           </motion.div>

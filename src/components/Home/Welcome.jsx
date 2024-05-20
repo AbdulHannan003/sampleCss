@@ -12,7 +12,7 @@ function Welcome() {
 
     return (
         <div className='max-w-[1240] p-4 mx-auto md:my-10 md:grid grid-cols-2'>
-            <div className='col-span-1 md:w-[80%] h-96 md:overflow-visible mx-auto'>
+            <div className='col-span-1 md:w-[80%] h-96 overflow-hidden md:overflow-visible mx-auto'>
                 <img src={web} alt="" className='object-cover object-center' />
             </div>
             <div className='col-span-1 p-4 flex flex-col justify-center' ref={ref}>

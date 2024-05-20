@@ -27,9 +27,6 @@ function Banner() {
                         backSpeed={50}
                     ></ReactTyped>
                 </div>
-                <div className="text-white-100 md:text-lg py-1 md:py-3 ">
-                    <button className='border-2 border-[#5b2a86] mt-4 px-4 py-1 rounded-full text-[#5b2a86] hover:text-white-100 hover:bg-[#5b2a86] duration-300'>Get Started</button>
-                </div>
             </div>
         </div>
 
