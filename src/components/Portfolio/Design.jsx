@@ -11,17 +11,29 @@ const Design = () => {
     const [project, setProject] = useState('logo');
 
     const logoProjects = [{
-        url: "https://images.pexels.com/photos/1961792/pexels-photo-1961792.jpeg?auto=compress&cs=tinysrgb&w=600",
+        url: "src/assets/PortfolioLogos/logotemp1.png",
         alt: "Logo Design",
     },
     {
-        url: "https://images.pexels.com/photos/1961792/pexels-photo-1961792.jpeg?auto=compress&cs=tinysrgb&w=600",
+        url: "src/assets/PortfolioLogos/logotemp2.png",
         alt: "Logo Design",
     },
     {
-        url: "https://images.pexels.com/photos/1961792/pexels-photo-1961792.jpeg?auto=compress&cs=tinysrgb&w=600",
+        url: "src/assets/PortfolioLogos/logotemp3.png",
         alt: "Logo Design",
-    }
+    },
+    {
+        url: "src/assets/PortfolioLogos/logotemp4.png",
+        alt: "Logo Design",
+    },
+    {
+        url: "src/assets/PortfolioLogos/logotemp5.png",
+        alt: "Logo Design",
+    },
+    {
+        url: "src/assets/PortfolioLogos/logotemp6.png",
+        alt: "Logo Design",
+    },
     ]
 
     const webProjects = [{
@@ -119,8 +131,8 @@ const Design = () => {
             </div>
             <div className='w-full grid md:grid-cols-3'>
                 {projectData.map((project, index) => (
-                    <div key={index} className='col-span-1 border shadow-xl'>
-                        <img src={project.url} alt={project.alt} className='w-full object-center' />
+                    <div key={index} className='col-span-1 border shadow-xl overflow-hidden'>
+                        <img src={project.url} alt={project.alt} className='w-full object-center hover:scale-110 duration-200' />
                     </div>
                 ))}
             </div>
