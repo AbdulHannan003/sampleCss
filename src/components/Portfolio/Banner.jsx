@@ -1,10 +1,11 @@
 import React from 'react';
 import { ReactTyped } from "react-typed";
-import backgroundImage from '../../assets/banner.jpg';
+import backgroundImage from '../../assets/banner123.png';
+
 
 function Banner() {
     const divStyle = {
-        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,5)), linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,5)), url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0)) , url(${backgroundImage})`,
     };
 
     return (
