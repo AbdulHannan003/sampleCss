@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import temp1 from '../../assets/PortfolioWeb/web2.png';
+import temp2 from '../../assets/PortfolioWeb/web3.png';
+import temp3 from '../../assets/PortfolioWeb/web4.png';
+import temp4 from '../../assets/PortfolioWeb/web5.png';
+import temp5 from '../../assets/PortfolioWeb/web6.png';
+import temp6 from '../../assets/PortfolioWeb/web7.png';
 const Design = () => {
     const word = "Design";
     const letters = word.split("");
@@ -37,17 +42,30 @@ const Design = () => {
     ]
 
     const webProjects = [{
-        url: "src/assets/PortfolioWeb/dashboardTemplate.png",
-        alt: "Dashboard Template",
-    },
-    {
-        url: "src/assets/PortfolioWeb/websiteTemplate.png",
-        alt: "Web Templates",
-    },
-    {
-        url: "src/assets/PortfolioWeb/Webtemplate.png",
+        url: temp1,
         alt: "Web Template",
     },
+    {
+        url: temp2,
+        alt: "Web Template",
+    },
+    {
+        url: temp3,
+        alt: "Web Template",
+    },
+    {
+        url: temp4,
+        alt: "Web Template",
+    },
+    {
+        url: temp5,
+        alt: "Web Template",
+    },
+    {
+        url: temp6,
+        alt: "Web Template",
+    },
+
 
     ]
     const brandProjects = [{
