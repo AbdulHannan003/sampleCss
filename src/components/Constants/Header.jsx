@@ -57,7 +57,7 @@ function Header() {
 
 
     return (
-        <div className='bg-[#662e9b] bg-opacity-30 absolute px-2 md:py-1 w-full '>
+        <div className='absolute px-2 md:py-1 w-full '>
             <div className='max-w-[1240px] items-center md:py-2 flex justify-between mx-auto'>
                 <motion.div
                     className='flex my-auto'

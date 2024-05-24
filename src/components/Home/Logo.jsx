@@ -28,9 +28,9 @@ const Logo = () => {
     };
 
     return (
-        <div className="bg-gray-400 bg-opacity-10 overflow-hidden py-2">
+        <div className="bg-gradient-to-b from-[#662b9e] to-[#982aff] bg-opacity-60 overflow-hidden py-2">
             <div className='w-m-[1024px] text-xl md:text-4xl md:w-[60%] mx-auto'>
-                <h1 className='font-bold px-4 md:px-0 py-10 text-center text-black'>Crafting <span className='text-[#662e9b]'>Solutions</span>! Not Just Products, for Your Business</h1>
+                <h1 className='font-bold px-4 md:px-0 py-10 text-center text-white'>Crafting <span className='text-black'>Solutions !</span> Not Just Products, for Your Business</h1>
                 <div ref={Ref} className='flex flex-col-4 text-center gap-2 justify-between p-4'>
                     <motion.div initial="hidden" animate={InView ? "visible" : "hidden"} variants={fadeInUpVariants}>
                         <div>
@@ -38,7 +38,7 @@ const Logo = () => {
                                 <img src={ai} className='w-full h-full object-contain hover:scale-125 duration-200' alt="AI logo" />
                             </div>
                         </div>
-                        <span className='text-sm text-gray-500 italic font-semibold'>React</span>
+                        <span className='text-sm text-white italic font-semibold'>React</span>
                     </motion.div>
                     <motion.div initial="hidden" animate={InView ? "visible" : "hidden"} variants={fadeInUpVariants}>
                         <div>
@@ -46,7 +46,7 @@ const Logo = () => {
                                 <img src={css} className='w-full h-full object-contain hover:scale-125 duration-200' alt="CSS logo" />
                             </div>
                         </div>
-                        <span className='text-sm text-gray-500 italic font-semibold'>CSS</span>
+                        <span className='text-sm text-white italic font-semibold'>CSS</span>
                     </motion.div>
                     <motion.div initial="hidden" animate={InView ? "visible" : "hidden"} variants={fadeInUpVariants}>
                         <div>
@@ -54,7 +54,7 @@ const Logo = () => {
                                 <img src={html5} className='w-full h-full object-contain hover:scale-125 duration-200' alt="HTML5 logo" />
                             </div>
                         </div>
-                        <span className='text-sm text-gray-500 italic font-semibold'>HTML5</span>
+                        <span className='text-sm text-white italic font-semibold'>HTML5</span>
                     </motion.div>
                     <motion.div initial="hidden" animate={InView ? "visible" : "hidden"} variants={fadeInUpVariants}>
                         <div>
@@ -62,7 +62,7 @@ const Logo = () => {
                                 <img src={mongo} className='w-full h-full object-contain hover:scale-125 duration-200' alt="MongoDB logo" />
                             </div>
                         </div>
-                        <span className='text-sm text-gray-500 italic font-semibold'>MongoDB</span>
+                        <span className='text-sm text-white italic font-semibold'>MongoDB</span>
                     </motion.div>
                 </div>
                 <div ref={Ref} className='flex flex-col-4 text-center gap-2 justify-between p-4'>
@@ -72,7 +72,7 @@ const Logo = () => {
                                 <img src={node} className='w-full h-full object-contain hover:scale-125 duration-200' alt="Node.js logo" />
                             </div>
                         </div>
-                        <span className='text-sm text-gray-500 italic font-semibold'>Node JS</span>
+                        <span className='text-sm text-white italic font-semibold'>Node JS</span>
                     </motion.div>
                     <motion.div initial="hidden" animate={InView ? "visible" : "hidden"} variants={fadeInUpVariants}>
                         <div>
@@ -80,7 +80,7 @@ const Logo = () => {
                                 <img src={ps} className='w-full h-full object-contain hover:scale-125 duration-200' alt="Photoshop logo" />
                             </div>
                         </div>
-                        <span className='text-sm text-gray-500 italic font-semibold'>Photoshop</span>
+                        <span className='text-sm text-white italic font-semibold'>Photoshop</span>
                     </motion.div>
                     <motion.div initial="hidden" animate={InView ? "visible" : "hidden"} variants={fadeInUpVariants}>
                         <div>
@@ -88,7 +88,7 @@ const Logo = () => {
                                 <img src={react} className='w-full h-full object-contain hover:scale-125 duration-200' alt="React logo" />
                             </div>
                         </div>
-                        <span className='text-sm text-gray-500 italic font-semibold'>Illustrator</span>
+                        <span className='text-sm text-white italic font-semibold'>Illustrator</span>
                     </motion.div>
                     <motion.div initial="hidden" animate={InView ? "visible" : "hidden"} variants={fadeInUpVariants}>
                         <div>
@@ -96,7 +96,7 @@ const Logo = () => {
                                 <img src={tailwind} className='w-full h-full object-contain hover:scale-125 duration-200' alt="Tailwind CSS logo" />
                             </div>
                         </div>
-                        <span className='text-sm text-gray-500 italic font-semibold'>Tailwind CSS</span>
+                        <span className='text-sm text-white italic font-semibold'>Tailwind CSS</span>
                     </motion.div>
                 </div>
             </div>

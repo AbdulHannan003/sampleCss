@@ -15,7 +15,7 @@ function Banner() {
                     <div className="md:text-4xl w-full text-lg text-white-100 pl-4 md:py-3">
                         Web & Design
                     </div>
-                    <div className="md:text-7xl text-2xl py-1 md:py-2 font-serif text-[#662e9b]">
+                    <div className="md:text-7xl text-2xl py-1 md:py-2 font-serif text-[#982aff]">
                         Experts
                     </div>
                     <div className="md:text-4xl w-full text-lg  text-white-100 pl-4 md:py-3">
