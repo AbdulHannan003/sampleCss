@@ -125,7 +125,7 @@ const Form = () => {
                     <div className="text-white-100 flex justify-center px-12 md:text-lg py-1">
                         <button
                             type="submit"
-                            className="border-2 border-[#662e9b] px-12 py-2 rounded-full text-white hover:bg-[#662e9b] hover:text-white-100 hover:bg-[#662e9b]-700 duration-300"
+                            className="border-2 border-white px-12 py-2 rounded-full text-white hover:bg-[#662e9b] hover:text-white-100 hover:bg-[#662e9b]-700 duration-300"
                         >
                             Submit
                         </button>
