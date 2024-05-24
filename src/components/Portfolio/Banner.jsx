@@ -2,10 +2,22 @@ import React from 'react';
 import { ReactTyped } from "react-typed";
 import backgroundImage from '../../assets/banner123.png';
 import img from '../../assets/work-img.png';
+import { motion } from 'framer-motion';
 
 function Banner() {
     const divStyle = {
         backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7)), linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.7)) , url(${backgroundImage})`,
+    };
+    const floatingVariants = {
+        animate: {
+            y: [0, -10, 10, 0],
+            transition: {
+                duration: 6,
+                ease: 'easeInOut',
+                repeat: Infinity,
+                repeatType: 'loop',
+            },
+        },
     };
 
     return (
@@ -31,7 +43,12 @@ function Banner() {
                     </div>
                 </div>
                 <div className='p-2 hidden md:flex w-2/4 h-[70vh]'>
-                    <img src={img} className='w-full h-full object-contain self-center' img alt="" />
+                    <motion.img
+                        src={img}
+                        className='w-full h-full object-contain self-center'
+                        alt=""
+                        variants={floatingVariants}
+                        animate="animate" />
                 </div>
             </div>
         </div>
