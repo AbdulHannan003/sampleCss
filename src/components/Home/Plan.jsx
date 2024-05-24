@@ -153,30 +153,30 @@ function Plan() {
             initial={{ opacity: 0, y: 250 }}
             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 250 }}
             transition={{ duration: 1 }}
-            className='py-10 px-2 bg-gradient-to-l from-[#662e9b] to-[#982aff] text-white'
+            className='py-10 px-2 bg-gradient-to-l from-[#662e9b] to-[#982aff] text-white-100'
             ref={ref}
         >
             <div id='plan' className='max-w-[1240px] mx-auto p-4'>
                 <h1 className='font-serif text-black text-xl md:text-5xl font-bold text-center'>Our Plans</h1>
-                <p className='text-center pt-4 md:text-lg font-bold text-white'>Choose Your Plan</p>
-                <p className='text-center pt-2 text-white md:text-lg text-bold'>We Provide The Best Services For The Most Reasonable Price</p>
+                <p className='text-center pt-4 md:text-lg font-bold text-white-100'>Choose Your Plan</p>
+                <p className='text-center pt-2 text-white-100 md:text-lg text-bold'>We Provide The Best Services For The Most Reasonable Price</p>
             </div>
             <div className="max-w-[1240px] mx-auto md:text-lg py-1 text-center md:py-3 flex justify-evenly">
                 <button
                     onClick={() => setPlan('logo')}
-                    className='border-2 border-white mt-4 px-4 py-1 rounded-full text-white focus:bg-white focus:text-[#662e9b] focus:shadow-lg font-bold'
+                    className='border-2 border-white-100 mt-4 px-4 py-1 rounded-full text-white-100 focus:bg-white-100 focus:text-[#662e9b] focus:shadow-lg font-bold'
                 >
                     Logo
                 </button>
                 <button
                     onClick={() => setPlan('web')}
-                    className='border-2 border-white mt-4 px-4 py-1 rounded-full text-white focus:bg-white focus:text-[#662e9b] focus:shadow-lg font-bold'
+                    className='border-2 border-white-100 mt-4 px-4 py-1 rounded-full text-white-100 focus:bg-white-100 focus:text-[#662e9b] focus:shadow-lg font-bold'
                 >
                     Web Design
                 </button>
                 <button
                     onClick={() => setPlan('brand')}
-                    className='border-2 border-white mt-4 px-4 py-1 rounded-full text-white focus:bg-white focus:text-[#662e9b] focus:shadow-lg font-bold'
+                    className='border-2 border-white-100 mt-4 px-4 py-1 rounded-full text-white-100 focus:bg-white-100 focus:text-[#662e9b] focus:shadow-lg font-bold'
                 >
                     Branding
                 </button>
@@ -184,24 +184,24 @@ function Plan() {
 
             <div className="max-w-[1240px] mx-auto p-4 md:grid grid-cols-3 gap-8">
                 {inView && planData.map((item, index) => (
-                    <div key={index} className="flex flex-col sm:mx-2 shadow-xl h-auto rounded-xl px-4 py-12 border border-white my-5 hover:shadow-xl hover:scale-105 duration-500">
-                        <span className='text-xl md:text-4xl font-bold text-white'>{item.price}</span>
+                    <div key={index} className="flex flex-col sm:mx-2 shadow-xl h-auto rounded-xl px-4 py-12 border border-white-100 my-5 hover:shadow-xl hover:scale-105 duration-500">
+                        <span className='text-xl md:text-4xl font-bold text-white-100'>{item.price}</span>
                         <div className='my-4 border-y-2 border-gray-300'>
-                            <h2 className='text-base md:text-xl py-4 font-bold text-white'>{item.title}</h2>
+                            <h2 className='text-base md:text-xl py-4 font-bold text-white-100'>{item.title}</h2>
                         </div>
                         <div>
                             <ul>
                                 {Object.keys(item).map((key, index) => {
                                     if (key === 'price' || key === 'title') return null
                                     return item[key] && <li key={index} className='text-sm md:text-md py-3 flex items-center'>
-                                        <span className='mr-2'><AiOutlineCheckCircle className='text-lg md:text-xl text-white' /></span>
+                                        <span className='mr-2'><AiOutlineCheckCircle className='text-lg md:text-xl text-white-100' /></span>
                                         {item[key]}
                                     </li>
                                 })}
                             </ul>
                         </div>
                         <div className='text-center mt-auto '>
-                            <button onClick={handleClick} className='border-2 border-white mt-4 px-4 py-1 rounded-full text-white hover:text-[#662e9b] hover:bg-white duration-300'>Get Quote</button>
+                            <button onClick={handleClick} className='border-2 border-white-100 mt-4 px-4 py-1 rounded-full text-white-100 hover:text-[#662e9b] hover:bg-white-100 duration-300'>Get Quote</button>
                         </div>
                     </div>
                 ))}

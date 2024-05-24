@@ -53,7 +53,7 @@ const Provide = () => {
               className='w-2/4 p-4 md:mx-8 hover:scale-110 hover:shadow-2xl duration-300'
               variants={itemVariants}
             >
-              <h1 className='text-lg md:text-3xl text-white font-semibold'>Develop :</h1>
+              <h1 className='text-lg md:text-3xl text-white-100 font-semibold'>Develop :</h1>
               <div className='border-2 w-2/12 border-black my-1'></div>
               <ul className='mt-2 px-5'>
                 {DevServices.map((service, index) => (
@@ -65,7 +65,7 @@ const Provide = () => {
               className='w-2/4 p-4 md:mx-8 hover:scale-110 hover:shadow-2xl duration-300'
               variants={itemVariants}
             >
-              <h1 className='text-lg md:text-3xl text-white font-semibold'>Design :</h1>
+              <h1 className='text-lg md:text-3xl text-white-100 font-semibold'>Design :</h1>
               <div className='border-2 w-2/12 border-black my-1'></div>
               <ul className='mt-2 px-5'>
                 {DesServices.map((service, index) => (
