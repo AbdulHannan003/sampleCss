@@ -157,7 +157,7 @@ function Plan() {
             ref={ref}
         >
             <div id='plan' className='max-w-[1240px] mx-auto p-4'>
-                <h1 className='font-serif text-[#662e9b] text-2xl md:text-5xl font-bold text-center'>Our Plans</h1>
+                <h1 className='font-serif text-[#662e9b] text-xl md:text-5xl font-bold text-center'>Our Plans</h1>
                 <p className='text-center pt-4 md:text-lg font-bold text-black'>Choose Your Plan</p>
                 <p className='text-center pt-2 text-[#662e9b] md:text-lg text-bold'>We Provide The Best Services For The Most Reasonable Price</p>
             </div>
@@ -184,16 +184,16 @@ function Plan() {
 
             <div className="max-w-[1240px] mx-auto p-4 md:grid grid-cols-3 gap-8">
                 {inView && planData.map((item, index) => (
-                    <div key={index} className="flex flex-col sm:mx-2 shadow-xl h-auto rounded-xl px-4 py-12 border border-[#662e9b] my-5 hover:shadow-2xl hover:scale-105 duration-500">
-                        <span className='text-6xl md:text-2xl font-bold text-black'>{item.price}</span>
+                    <div key={index} className="flex flex-col sm:mx-2 shadow-xl h-auto rounded-xl px-4 py-12 border border-[#662e9b] my-5 hover:shadow-xl hover:scale-105 duration-500">
+                        <span className='text-xl md:text-4xl font-bold text-black'>{item.price}</span>
                         <div className='my-4 border-y-2 border-gray-300'>
-                            <h2 className='text-lg md:text-xl py-4 font-bold text-black'>{item.title}</h2>
+                            <h2 className='text-base md:text-xl py-4 font-bold text-black'>{item.title}</h2>
                         </div>
                         <div>
                             <ul>
                                 {Object.keys(item).map((key, index) => {
                                     if (key === 'price' || key === 'title') return null
-                                    return item[key] && <li key={index} className='text-lg md:text-md py-3 flex items-center'>
+                                    return item[key] && <li key={index} className='text-sm md:text-md py-3 flex items-center'>
                                         <span className='mr-2'><AiOutlineCheckCircle className='text-lg md:text-xl text-[#662e9b]' /></span>
                                         {item[key]}
                                     </li>

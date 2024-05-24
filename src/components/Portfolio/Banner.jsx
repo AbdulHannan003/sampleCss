@@ -13,17 +13,17 @@ function Banner() {
             <div className='md:flex md:justify-between md:px-4 md:w-[1240px] mx-auto'>
                 <div className='text-left font-bold self-center mx-3 md:mx-1 md:w-2/4'>
                     <div className="md:text-4xl text-lg text-white-100 md:mx-5 mx-3 md:py-3">
-                        check out
+                        Check Out
                     </div>
                     <div className="md:text-7xl text-2xl md:py-2 font-serif text-[#5b2a86]">
-                        our work
+                        Our Work
                     </div>
                     <div className="text-white-100 md:text-4xl text-lg md:mx-5 mx-3 md:py-3">
                         We are here to
                         <ReactTyped
-                            className='text-[#5b2a86] md:text-3xl py-1 text-lg md:py-3'
+                            className='text-[#5b2a86] md:text-4xl py-1 px-2 text-lg md:py-3'
                             strings={[
-                                "Providing stable and sustainable solutions",
+                                "provide stable and sustainable solutions",
                             ]}
                             typeSpeed={60}
                             backSpeed={50}

@@ -13,14 +13,14 @@ function Banner() {
             <div className="max-w-[1240px] text-left font-bold h-full content-center w-full md:w-auto">
                 <div className='col-span-1 md:w-[800px] mx-3 px-10'>
                     <div className="md:text-4xl w-full text-lg text-white-100 pl-4 md:py-3">
-                        web & design
+                        Web & Design
                     </div>
                     <div className="md:text-7xl text-2xl py-1 md:py-2 font-serif text-[#662e9b]">
-                        experts
+                        Experts
                     </div>
                     <div className="md:text-4xl w-full text-lg  text-white-100 pl-4 md:py-3">
                         <ReactTyped
-                            className='md:text-3xl py-1 text-lg md:py-3'
+                            className='md:text-4xl py-1 text-lg md:py-3'
                             strings={[
                                 "Professional web designs and development",
                             ]}

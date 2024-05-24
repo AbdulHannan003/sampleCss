@@ -8,13 +8,13 @@ function Banner() {
     };
 
     return (
-        <div style={divStyle} className="w-full px-2 md:px-[60px] content-center bg-cover bg-no-repeat bg-center h-[300px] md:h-[90vh]">
-            <div className='text-left font-semibold w-[1240px] mx-auto'>
+        <div style={divStyle} className="md:w-full px-2 md:px-[60px] content-center bg-cover bg-no-repeat bg-center h-[300px] md:h-[90vh]">
+            <div className='text-left font-semibold md:max-w-[1240px] mx-auto'>
                 <div className="md:text-4xl text-lg py-1 text-white-100 px-3 md:px-12 md:py-3">
-                    we build
+                    We build
                 </div>
                 <div className="md:text-7xl text-2xl py-1 md:py-2 font-serif text-[#662e9b]">
-                    websites & much more.
+                    Websites & much more.
                 </div>
                 <div className="text-white-100 md:text-4xl text-lg py-1 px-3 md:px-12 md:py-3">
                     We are here to <span> </span>

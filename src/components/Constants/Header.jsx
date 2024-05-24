@@ -71,7 +71,7 @@ function Header() {
                         </motion.div>
                     </motion.div>
                     <motion.div className='h-[50px] border-x-2  hidden md:flex border-white-100 mx-2' variants={itemVariants} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}></motion.div>
-                    <motion.div className='content-center text-3xl text-white-100 font-bold hidden md:flex self-center' variants={solutionVariant} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}>
+                    <motion.div className='content-center text-sm md:text-3xl text-white-100 font-bold md:flex self-center' variants={solutionVariant} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}>
                         SASKA Solutions
                     </motion.div>
                 </motion.div>
@@ -89,7 +89,7 @@ function Header() {
                     ))}
                 </ul>
                 {/* responsive menu */}
-                <ul className={`duration-500 md:hidden w-full fixed h-screen bg-[#662e9b] text-white-100 gap-5 top-[45px] ${toggle ? 'left-[0]' : 'left-[-100%]'}`}>
+                <ul className={`duration-500 md:hidden w-screen fixed h-screen bg-[#662e9b] text-white-100 gap-5 top-[45px] ${toggle ? 'left-[0]' : 'left-[-100%]'}`}>
                     {links.map((items, i) => (
                         <li key={i}>
                             <Link className='flex justify-center text-lg py-5' onClick={() => setToggle(!toggle)} to={items.path}>{items.link}</Link>
