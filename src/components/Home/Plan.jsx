@@ -18,43 +18,43 @@ function Plan() {
     };
 
     const logoPlanData = [{
-        price: "$30",
+        price: "$10 - $25",
+        title: "LOGO STANDARD",
+        design: "",
+        concepts: "2 Orignal Logo Concepts",
+        dedicated: "",
+        revision: "2 Total Revision",
+        formats: "Formats: JPG Only",
+        time: "48 - 72 Hours Turnaround Time",
+        owner: "100% Ownership",
+        satisfaction: "100% Satisfaction",
+        money: "",
+    },
+    {
+        price: "$75 - $99",
         title: "LOGO SPECIAL",
-        design: "Free Icon Design",
-        concepts: "4 Orignal Logo Concepts",
-        dedicated: "2 Dedicated Logo Designs",
-        revision: "4 Revision",
-        formats: "Formats :JPEG Only",
-        time: "24 - 48 Hours Turnaround Time",
+        design: "",
+        concepts: "6 Orignal Logo Concepts",
+        dedicated: "",
+        revision: "5 Revisions",
+        formats: "Formats :JPG, PSD, PNG",
+        time: "48 - 72 Hours Turnaround Time",
         owner: "100% Ownership",
         satisfaction: "100% Satisfaction",
-        money: "100% Money Back Gurantee",
+        money: "",
     },
     {
-        price: "$99",
-        title: "LOGO PLUS",
-        design: "Free Icon Design",
-        concepts: "12 Orignal Logo Concepts",
-        dedicated: "4 Dedicated Logo Designs",
-        revision: "Unlimited Revisions",
-        formats: "Formats :JPEG, PSD, EPS, AI, PNG, SVG, ,TIFF",
-        time: "24 - 48 Hours Turnaround Time",
-        owner: "100% Ownership",
-        satisfaction: "100% Satisfaction",
-        money: "100% Money Back Gurantee",
-    },
-    {
-        price: "$250",
+        price: "$165 - $250",
         title: "LOGO PREMIUM",
-        design: "Stationery Design (Business Cards, Letterheads, Envelopes)",
-        concepts: "Unlimited Orignal Logo Concepts",
-        dedicated: "8 Dedicated Logo Designs",
+        design: "Unlimited Orignal Logo Concepts",
+        concepts: "Stationery Design (Business Cards, Letterheads, Envelopes)",
+        dedicated: "Grayscale Formats",
         revision: "Unlimited Revisions",
-        formats: "Formats :JPEG, PSD, EPS, AI, PNG, SVG, ,TIFF",
+        formats: "Formats :JPG, AI, PNG, SVG",
         time: "24 - 48 Hours Turnaround Time",
         owner: "100% Ownership",
         satisfaction: "100% Satisfaction",
-        money: "100% Money Back Gurantee",
+        money: "",
     }
     ]
 
@@ -69,7 +69,7 @@ function Plan() {
         time: "Website Initial Concept in 48 Hours",
         owner: "100% Ownership",
         satisfaction: "Complete Design & Development",
-        money: "100% Money Back Gurantee",
+        money: "",
     },
     {
         price: "$799",
@@ -82,7 +82,7 @@ function Plan() {
         time: "Website Initial Concept in 48 Hours",
         owner: "100% Ownership",
         satisfaction: "Complete Design & Development",
-        money: "100% Money Back Gurantee",
+        money: "",
     },
     {
         price: "$1299",
@@ -95,7 +95,7 @@ function Plan() {
         time: "Website Initial Concept in 48 Hours",
         owner: "100% Ownership",
         satisfaction: "Complete Design & Development",
-        money: "100% Money Back Gurantee",
+        money: "",
     }
     ]
     const brandPlanData = [{
@@ -157,7 +157,7 @@ function Plan() {
             ref={ref}
         >
             <div id='plan' className='max-w-[1240px] mx-auto p-4'>
-                <h1 className='font-serif text-black text-xl md:text-5xl font-bold text-center'>Our Plans</h1>
+                <h1 className='font-serif text-black text-xl md:text-5xl font-bold text-center'>Offers</h1>
                 <p className='text-center pt-4 md:text-lg font-bold text-white-100'>Choose Your Plan</p>
                 <p className='text-center pt-2 text-white-100 md:text-lg text-bold'>We Provide The Best Services For The Most Reasonable Price</p>
             </div>
@@ -185,7 +185,8 @@ function Plan() {
             <div className="max-w-[1240px] mx-auto p-4 md:grid grid-cols-3 gap-8">
                 {inView && planData.map((item, index) => (
                     <div key={index} className="flex flex-col sm:mx-2 shadow-xl h-auto rounded-xl px-4 py-12 border border-white-100 my-5 hover:shadow-xl hover:scale-105 duration-500">
-                        <span className='text-xl md:text-4xl font-bold text-white-100'>{item.price}</span>
+                        <span className='text-sm font-semibold text-white-100'>From</span>
+                        <span className='text-4xl md:text-4xl font-bold text-white-100'>{item.price}</span>
                         <div className='my-4 border-y-2 border-gray-300'>
                             <h2 className='text-base md:text-xl py-4 font-bold text-white-100'>{item.title}</h2>
                         </div>

@@ -50,7 +50,8 @@ function Banner() {
     };
     const floatingVariants = {
         animate: {
-            y: [0, -10, 0, 10, 0], // Move up, down, back to start
+            y: [0, 10, -10, 0],
+            x: [0, -10, 10, 0],
             transition: {
                 duration: 6,
                 ease: 'easeInOut',
@@ -65,7 +66,7 @@ function Banner() {
             style={divStyle}
             className="w-full h-[300px] md:h-[90vh] bg-cover bg-no-repeat bg-center flex"
             id='contact'>
-            <div className="max-w-[1240px] text-left font-bold self-center w-full mx-auto md:w-[1000px] flex md:justify-between">
+            <div className="max-w-[1240px] text-left font-bold self-center w-full mx-auto flex md:justify-between">
                 <div className='p-2 hidden md:block md:w-3/4'>
                     <motion.img
                         src={img}
@@ -75,13 +76,13 @@ function Banner() {
                         animate="animate"
                     />
                 </div>
-                <div className='col-span-1 md:w-3/4 px-10'>
+                <div className='col-span-1 md:w-4/4 px-12'>
                     <div className="md:text-7xl text-2xl py-1 md:py-2 font-serif text-[#982aff]">
-                        Contact Us Today !
+                        Contact Us Today...!
                     </div>
-                    <div className=" text-white-100 md:text-3xl text-lg pl-4 md:py-3">
+                    <div className=" text-white-100 md:text-3xl text-lg pl-6 md:py-4">
                         <ReactTyped
-                            className='md:text-4xl py-1 text-lg md:py-3'
+                            className='md:text-4xl py-2 text-lg md:py-4'
                             strings={[
                                 "Need a stunning new website, a redesign, or custom development ?",
                             ]}

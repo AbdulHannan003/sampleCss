@@ -30,7 +30,7 @@ const Logo = () => {
     return (
         <div className="bg-gradient-to-b from-[#662b9e] to-[#982aff] bg-opacity-60 overflow-hidden py-2">
             <div className='w-m-[1024px] text-xl md:text-4xl md:w-[60%] mx-auto'>
-                <h1 className='font-bold px-4 md:px-0 py-10 text-center text-white-100'>Crafting <span className='text-black'>Solutions !</span> Not Just Products, for Your Business</h1>
+                <h1 className='font-bold px-4 md:px-0 py-10 text-center text-white-100'>Crafting <span className='text-white font-bold text-3xl md:text-5xl'>Solutions !</span> Not Just Products, for Your Business</h1>
                 <div ref={Ref} className='flex flex-col-4 text-center gap-2 justify-between p-4'>
                     <motion.div initial="hidden" animate={InView ? "visible" : "hidden"} variants={fadeInUpVariants}>
                         <div>

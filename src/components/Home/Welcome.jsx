@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ReactTyped } from "react-typed";
 import web from '../../assets/img1.png';
-import { motion } from 'framer-motion';
 
 
 
@@ -11,27 +10,13 @@ function Welcome() {
     const { ref, inView } = useInView({
         triggerOnce: true,
     });
-    const floatingVariants = {
-        animate: {
-            x: [0, 10, 0, 10, -10, 0],
-            y: [0, -10, 0],
-            transition: {
-                duration: 6,
-                ease: 'easeInOut',
-                repeat: Infinity,
-                repeatType: 'loop',
-            },
-        },
-    };
     return (
         <div className='max-w-[1240] p-4 mx-auto md:my-10 md:grid grid-cols-2'>
             <div className='col-span-1 md:w-[60%] h-full overflow-hidden md:overflow-visible mx-auto'>
-                <motion.img
+                <img
                     src={web}
                     alt=""
                     className='object-cover object-center'
-                    variants={floatingVariants}
-                    animate="animate"
                 />
             </div>
             <div className='col-span-1 p-4 flex flex-col justify-center' ref={ref}>
