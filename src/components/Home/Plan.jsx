@@ -367,8 +367,8 @@ function Plan() {
             transition={{ duration: 1 }}
             className='py-10 px-2 bg-gradient-to-t from-[#662e9b] to-[#982aff] text-white-100'
             ref={ref}
+            id='plan'
         >
-            {/* Plan selection buttons */}
             <div className='max-w-[1240px] mx-auto md:text-lg py-1 text-center md:py-3 flex justify-evenly'>
                 <button
                     onClick={() => setPlan('logo')}
@@ -392,11 +392,9 @@ function Plan() {
                     Branding
                 </button>
             </div>
-
-            {/* Plan cards */}
             <div className='max-w-[1240px] mx-auto p-4 md:grid grid-cols-3 gap-8'>
                 {inView && planData.map((item, index) => (
-                    <div key={index} className='flex flex-col sm:mx-2 h-auto rounded-xl px-4 pt-12 pb-2 bg-white-100 border border-[#b12aff] shadow-md hover:shadow-lg transform hover:scale-105 transition duration-500'>
+                    <div key={index} className='flex flex-col sm:mx-2 h-auto rounded-xl my-5 md:my-auto px-4 pt-12 pb-2 bg-white-100 border border-[#b12aff] shadow-md hover:shadow-lg transform hover:scale-105 transition duration-500'>
                         <span className='text-sm font-semibold text-[#662e9b]'>Starting From</span>
                         <span className='text-4xl md:text-4xl font-bold text-[#662e9b]'>{item.price}</span>
                         <div className='my-4 border-y-2 border-gray-300'>

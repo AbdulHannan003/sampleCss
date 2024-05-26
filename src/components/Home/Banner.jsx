@@ -28,6 +28,7 @@ function Banner() {
                         typeSpeed={60}
                         backSpeed={50}
                         loop
+                        showCursor={false}
                     ></ReactTyped>
                 </div>
                 <div className="text-white-100 md:w-2/4 px-12 md:text-lg py-1 md:py-12 ">

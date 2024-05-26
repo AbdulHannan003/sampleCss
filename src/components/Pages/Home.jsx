@@ -11,7 +11,6 @@ const Home = () => {
         <>
             <Banner />
             <Welcome />
-            <Seprator />
             <Plan />
             <Standout />
             <Logo />

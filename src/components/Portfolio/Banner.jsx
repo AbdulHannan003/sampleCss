@@ -39,6 +39,7 @@ function Banner() {
                             ]}
                             typeSpeed={60}
                             backSpeed={50}
+                            showCursor={false}
                         ></ReactTyped>
                     </div>
                 </div>

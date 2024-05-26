@@ -82,11 +82,12 @@ function Banner() {
                     </div>
                     <div className=" text-white-100 md:text-3xl text-lg pl-6 md:py-4">
                         <ReactTyped
-                            className='md:text-4xl py-2 text-lg md:py-4'
+                            className='md:text-4xl py-2 text-lg md:py-4 inherit'
                             strings={[
                                 "Need a stunning new website, a redesign, or custom development ?",
                             ]}
                             typeSpeed={30}
+                            showCursor={false}
                         ></ReactTyped>
                     </div>
                 </div>

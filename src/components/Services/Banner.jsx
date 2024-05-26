@@ -4,7 +4,7 @@ import backgroundImage from '../../assets/servicebanner.png';
 
 function Banner() {
     const divStyle = {
-        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0))  , url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))  , url(${backgroundImage})`,
     };
     return (
         <div
@@ -13,10 +13,10 @@ function Banner() {
             <div className="max-w-[1240px] text-left font-bold h-full content-center w-full md:w-auto">
                 <div className='col-span-1 md:w-[800px] mx-3 px-10'>
                     <div className="md:text-4xl w-full text-lg text-white-100 pl-4 md:py-3">
-                        Web & Design
+                        <h2>Web & Design</h2>
                     </div>
                     <div className="md:text-7xl text-2xl py-1 md:py-2 font-serif text-[#982aff]">
-                        Experts
+                        <h1>Experts</h1>
                     </div>
                     <div className="md:text-4xl w-full text-lg  text-white-100 pl-4 md:py-3">
                         <ReactTyped
@@ -26,6 +26,7 @@ function Banner() {
                             ]}
                             typeSpeed={60}
                             backSpeed={50}
+                            showCursor={false}
                         ></ReactTyped>
                     </div>
                 </div>

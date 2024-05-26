@@ -6,8 +6,7 @@ import saskaLogo from '../../assets/saskalogo.png';
 
 function Header() {
     const [toggle, setToggle] = useState(false);
-    const location = useLocation(); // useLocation hook to get the current path
-
+    const location = useLocation();
     const links = [
         {
             id: 1,
