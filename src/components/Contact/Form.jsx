@@ -24,14 +24,15 @@ const Form = () => {
                     <p className='text-xl text-white font-bold'>Contact us</p>
                     <h1 className='text-3xl p-2 italic text-center font-bold my-2 text-white-100 bg-[#662e9b] rounded-xl shadow-xl font-serif'>"Don't Wait, Create Your Success"</h1>
                 </div>
-                <form ref={form} onSubmit={sendEmail} className="w-full md:w-1/2 md:mx-[80px] p-4 pt-6 mb-4 border-black border-2 rounded-xl hover:scale-105 duration-300 hover:shadow-2xl">
+                <form ref={form} onSubmit={sendEmail} className="w-full md:w-1/2 md:mx-[80px] p-4 pt-6 mb-4 border-white-100 border-2 rounded-xl hover:scale-105 duration-300 hover:shadow-2xl">
                     <div className="flex flex-wrap mb-6">
                         <div className="w-full md:w-full px-3">
-                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="last-name">
+                            <label className="block tracking-wide text-white-100 text-xs font-bold mb-2" htmlFor="last-name">
                                 Full Name*
                             </label>
                             <input
-                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-700 border border-black rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
+                                placeholder='John Doe'
+                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-500 border border-black rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
                                 id="full-name"
                                 type="text"
                                 name="from_fullName"
@@ -41,11 +42,12 @@ const Form = () => {
                     </div>
                     <div className="flex flex-wrap  mb-6">
                         <div className="w-full px-3">
-                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="company">
+                            <label className="block tracking-wide text-white-100 text-xs font-bold mb-2" htmlFor="company">
                                 Company
                             </label>
                             <input
-                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-700 border border-black rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
+                                placeholder='ABC ltd.'
+                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-500 border border-black rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
                                 id="company"
                                 type="text"
                                 name="company"
@@ -54,11 +56,12 @@ const Form = () => {
                     </div>
                     <div className="flex flex-wrap  mb-6">
                         <div className="w-full px-3">
-                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="email">
+                            <label className="block tracking-wide text-white-100 text-xs font-bold mb-2" htmlFor="email">
                                 Email
                             </label>
                             <input
-                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-700 border border-black rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
+                                placeholder='xyz"@abc.com'
+                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-500 border border-black rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
                                 id="email"
                                 type="email"
                                 name="email"
@@ -68,11 +71,12 @@ const Form = () => {
                     </div>
                     <div className="flex flex-wrap  mb-6">
                         <div className="w-full px-3">
-                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="phone">
+                            <label className="block tracking-wide text-white-100 text-xs font-bold mb-2" htmlFor="phone">
                                 Phone
                             </label>
                             <input
-                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-700 border border-black rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
+                                placeholder='+00 000 000 0000'
+                                className="appearance-none block w-full bg-[#662e9b]Light text-gray-500 border border-black rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
                                 id="phone"
                                 type="tel"
                                 name="phone"
@@ -81,23 +85,23 @@ const Form = () => {
                     </div>
                     <div className="flex flex-wrap  mb-6">
                         <div className="w-full px-3">
-                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="how-did-you-hear-about-us">
+                            <label className="block tracking-wide text-white-100 text-xs font-bold mb-2" htmlFor="how-did-you-hear-about-us">
                                 How did you hear about us?
                             </label>
                             <div className="relative">
                                 <select
-                                    className="block appearance-none w-full bg-[#662e9b]Light border border-black text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
+                                    className="block appearance-none w-full bg-[#662e9b]Light border border-black text-gray-500 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
                                     id="how-did-you-hear-about-us"
                                     name="how_did_you_hear"
                                     required
                                 >
-                                    <option value="">Select an option</option>
-                                    <option value="Friend">Friend</option>
-                                    <option value="Cooperate or Business">Cooperate or Business</option>
-                                    <option value="Social Media">Social Media</option>
-                                    <option value="Google">Google</option>
+                                    <option className='text-black' value="">Select an option</option>
+                                    <option className='text-black' value="Friend">Friend</option>
+                                    <option className='text-black' value="Cooperate or Business">Cooperate or Business</option>
+                                    <option className='text-black' value="Social Media">Social Media</option>
+                                    <option className='text-black' value="Google">Google</option>
                                 </select>
-                                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white-100">
                                     <svg
                                         className="fill-current h-4 w-4"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -111,11 +115,11 @@ const Form = () => {
                     </div>
                     <div className="flex flex-wrap  mb-6">
                         <div className="w-full px-3">
-                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="message">
+                            <label className="block tracking-wide text-white-100 text-xs font-bold mb-2" htmlFor="message">
                                 Message*
                             </label>
                             <textarea
-                                className="block w-full bg-[#662e9b]Light text-gray-700 border border-black rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
+                                className="block w-full bg-[#662e9b]Light text-gray-500 border border-black rounded py-3 px-4 leading-tight focus:outline-none focus:bg-[#662e9b]Light-100"
                                 id="message"
                                 name="message"
                                 required
@@ -125,7 +129,7 @@ const Form = () => {
                     <div className="text-white-100 flex justify-center px-12 md:text-lg py-1">
                         <button
                             type="submit"
-                            className="border-2 border-white px-12 py-2 rounded-full text-white hover:bg-[#662e9b] hover:text-white-100 hover:bg-[#662e9b]-700 duration-300"
+                            className="border-2 border-white px-12 py-2 rounded-full text-white hover:bg-white-100 hover:text-[#662e9b] hover:bg-[#662e9b]-700 duration-300"
                         >
                             Submit
                         </button>

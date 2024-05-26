@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import saskaLogo from '../../assets/saskalogo.png';
 
 function Header() {
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(false);
+    const location = useLocation(); // useLocation hook to get the current path
 
     const links = [
         {
@@ -28,7 +29,8 @@ function Header() {
             link: 'Contact',
             path: '/contact'
         },
-    ]
+    ];
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -55,9 +57,8 @@ function Header() {
         visible: { x: 0, opacity: 1 },
     };
 
-
     return (
-        <div className='absolute px-2 md:py-1 w-full '>
+        <div className='absolute px-2 md:py-1 w-full'>
             <div className='max-w-[1240px] items-center md:py-2 flex justify-between mx-auto'>
                 <motion.div
                     className='flex my-auto'
@@ -66,12 +67,12 @@ function Header() {
                     animate="visible"
                 >
                     <motion.div className='w-[55px] h-[55px] flex' variants={itemVariants}>
-                        <motion.div className='w-[30px] mx-auto self-center md:w-[55px] h-[30px] md:h-[55px]' variants={logoVariant} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}>
-                            <img src={saskaLogo} alt="" className='h-full w-full content-center ' />
+                        <motion.div className='w-[30px] mx-auto self-center md:w-[55px] h-[30px] md:h-[55px]' variants={logoVariant} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false }}>
+                            <img src={saskaLogo} alt="" className='h-full w-full content-center' />
                         </motion.div>
                     </motion.div>
-                    <motion.div className='h-[50px] border-x-2  hidden md:flex border-white-100 mx-2' variants={itemVariants} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}></motion.div>
-                    <motion.div className='content-center text-sm md:text-3xl text-white-100 font-bold md:flex self-center' variants={solutionVariant} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false, }}>
+                    <motion.div className='h-[50px] border-x-2 hidden md:flex border-white-100 mx-2' variants={itemVariants} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false }}></motion.div>
+                    <motion.div className='content-center text-sm md:text-3xl text-white-100 font-bold md:flex self-center' variants={solutionVariant} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false }}>
                         SASKA Solutions
                     </motion.div>
                 </motion.div>
@@ -84,7 +85,13 @@ function Header() {
                 <ul className='hidden md:flex text-white-100 gap-12'>
                     {links.map((items, i) => (
                         <li key={i}>
-                            <Link className='hover:border-b-4 border-[#662e9b] duration-100 focus:border-b-2' to={items.path}>{items.link}</Link>
+                            <Link
+                                className={`hover:border-b-4 border-[#b12aff] transition duration-200 ease-in-out ${location.pathname === items.path ? 'border-b-4 border-[#b12aff]' : 'border-transparent'
+                                    }`}
+                                to={items.path}
+                            >
+                                {items.link}
+                            </Link>
                         </li>
                     ))}
                 </ul>
@@ -98,8 +105,7 @@ function Header() {
                 </ul>
             </div>
         </div>
-    )
+    );
 }
 
-export default Header
-
+export default Header;
