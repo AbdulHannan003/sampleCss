@@ -3,8 +3,6 @@ import { useInView } from 'react-intersection-observer';
 import { ReactTyped } from "react-typed";
 import web from '../../assets/img1.png';
 
-
-
 function Welcome() {
     const typedRef = useRef();
     const { ref, inView } = useInView({
