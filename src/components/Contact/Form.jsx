@@ -1,36 +1,84 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
+import { confirmAlert } from 'react-confirm-alert'; // Import the confirmAlert function
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css for react-confirm-alert
 
 const Form = () => {
     const form = useRef();
 
+    const [phone, setPhone] = useState('');
+    const [phoneError, setPhoneError] = useState('');
+    const [emailError, setEmailError] = useState('');
+
+    const validateEmail = (email) => {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    };
+
+    const validatePhone = (phone) => {
+        const phonePattern = /^\+?[0-9\s\-]{10,12}$/;
+        return phonePattern.test(phone);
+    };
+
+    const handleChangePhone = (e) => {
+        const { value } = e.target;
+        const onlyNumbers = value.replace(/[^0-9+\s-]/g, '');
+        setPhone(onlyNumbers);
+
+        if (!validatePhone(onlyNumbers)) {
+            setPhoneError('Please enter a valid phone number');
+        } else {
+            setPhoneError('');
+        }
+    };
+
+    const showModal = (title, message) => {
+        confirmAlert({
+            customUI: ({ onClose }) => (
+                <div className="fixed top-0 right-0 bottom-0 left-0 flex justify-center items-center bg-gray-500 bg-opacity-75">
+                    <div className="bg-white text-black rounded-lg shadow-md p-4 w-64">
+                        <h5 className="text-lg font-bold mb-2">{title}</h5>
+                        <p className="text-sm mb-4">{message}</p>
+                        <button
+                            className="bg-[#662e9b] hover:bg-[#662e9b] text-white font-bold py-2 px-4 rounded"
+                            onClick={onClose}
+                        >
+                            OK
+                        </button>
+                    </div>
+                </div>
+            ),
+        });
+    };
+
     const sendEmail = (e) => {
         e.preventDefault();
+        const email = form.current.email.value;
+        const isEmailValid = validateEmail(email);
+        const isPhoneValid = validatePhone(phone);
 
-        emailjs.sendForm('service_htvfes9', 'template_lihw05o', form.current, '8GvgYzGjkwINOneAo')
-            .then((result) => {
-                console.log(result.text);
-                alert('Message Sent Successfully!');
-            }, (error) => {
-                console.log(error.text);
-                alert('Failed to Send Message, Please Try Again.');
-            });
-    };
-    const [phone, setPhone] = useState('');
-    const [error, setError] = useState('');
-
-    const handleChange = (e) => {
-        const { value } = e.target;
-        // Regex for phone validation
-        const phonePattern = /^\+?[0-9\s\-]{11,12}$/;
-        if (!phonePattern.test(value)) {
-            setError('Please enter a valid phone number');
+        if (!isEmailValid) {
+            setEmailError('Please enter a valid email address');
         } else {
-            setError('');
+            setEmailError('');
         }
-        setPhone(value);
-    };
 
+        if (isEmailValid && isPhoneValid) {
+            emailjs.sendForm('service_htvfes9', 'template_lihw05o', form.current, '8GvgYzGjkwINOneAo')
+                .then((result) => {
+                    console.log(result.text);
+                    showModal('Message Sent Successfully', 'Your message has been sent successfully. We will get back to you as soon as possible.');
+                }, (error) => {
+                    console.log(error.text);
+                    showModal('Failed to Send Message', 'Failed to send your message. Please try again.');
+                });
+        } else {
+            if (!isPhoneValid) {
+                setPhoneError('Please enter a valid phone number');
+            }
+            showModal('Invalid Input', 'Please correct the errors in the form before submitting');
+        }
+    };
 
     return (
         <div className=''>
@@ -42,7 +90,7 @@ const Form = () => {
                 <form ref={form} onSubmit={sendEmail} className="bg-[#662e9b] w-full md:w-1/2 md:mx-[80px] p-4 pt-6 mb-4 border-black border-2 rounded-xl duration-300 hover:shadow-2xl">
                     <div className="flex flex-wrap mb-6">
                         <div className="w-full md:w-full px-3">
-                            <label className="block tracking-wide text-white-100 text-sm font-semibold mb-2" htmlFor="last-name">
+                            <label className="block tracking-wide text-white-100 text-sm font-semibold mb-2" htmlFor="full-name">
                                 Full Name
                             </label>
                             <input
@@ -66,6 +114,7 @@ const Form = () => {
                                 id="company"
                                 type="text"
                                 name="company"
+                                required
                             />
                         </div>
                     </div>
@@ -82,6 +131,7 @@ const Form = () => {
                                 name="email"
                                 required
                             />
+                            {emailError && <p className="text-red-500 text-xs mt-1">{emailError}</p>}
                         </div>
                     </div>
                     <div className="flex flex-wrap  mb-6">
@@ -96,9 +146,10 @@ const Form = () => {
                                 type='tel'
                                 name="phone"
                                 value={phone}
-                                onChange={handleChange}
+                                onChange={handleChangePhone}
+                                required
                             />
-                            {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
+                            {phoneError && <p className="text-red-500 text-xs mt-1">{phoneError}</p>}
                         </div>
                     </div>
                     <div className="flex flex-wrap  mb-6">
