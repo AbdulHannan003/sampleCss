@@ -1,52 +1,57 @@
 import React from 'react';
+import { FaLaptopCode, FaMobileAlt, FaShoppingCart, FaCode, FaCogs, FaPalette, FaPencilRuler, FaPrint } from 'react-icons/fa';
 
 const Provide = () => {
   const DesServices = [
-    { title: "Web Design UI / UX", details: "Craft visually appealing and user-friendly interfaces for websites." },
-    { title: "Application Design", details: "Design intuitive and efficient user interfaces for various applications." },
-    { title: "Logo", details: "Create unique and memorable logos that represent your brand identity." },
-    { title: "Print Design", details: "Design printed materials such as brochures, flyers, and posters with creative flair." },
+    { title: "Web Design UI / UX", details: "Craft visually appealing and user-friendly interfaces for websites.", icon: FaPalette },
+    { title: "Application Design", details: "Design intuitive and efficient user interfaces for various applications.", icon: FaPencilRuler },
+    { title: "Logo", details: "Create unique and memorable logos that represent your brand identity.", icon: FaPencilRuler },
+    { title: "Print Design", details: "Design printed materials such as brochures, flyers, and posters with creative flair.", icon: FaPrint },
   ];
+
   const DevServices = [
-    { title: "Web Development", details: "Build responsive and dynamic websites using modern web technologies." },
-    { title: "Mobile App Development", details: "Develop native or cross-platform mobile applications for iOS and Android devices." },
-    { title: "E-Commerce", details: "Create robust and secure e-commerce platforms for online businesses." },
-    { title: "Software Development", details: "Develop custom software solutions tailored to your specific business needs." },
-    { title: "Functional Scripting", details: "Automate tasks and streamline workflows with efficient scripting solutions." },
-    { title: "Maintenance", details: "Provide ongoing support and maintenance to ensure the smooth operation of your digital products." }
+    { title: "Web Development", details: "Build responsive and dynamic websites using modern web technologies.", icon: FaLaptopCode },
+    { title: "Mobile App Development", details: "Develop native or cross-platform mobile applications for iOS and Android devices.", icon: FaMobileAlt },
+    { title: "E-Commerce", details: "Create robust and secure e-commerce platforms for online businesses.", icon: FaShoppingCart },
+    { title: "Software Development", details: "Develop custom software solutions tailored to your specific business needs.", icon: FaCode },
+    { title: "Functional Scripting", details: "Automate tasks and streamline workflows with efficient scripting solutions.", icon: FaCode },
+    { title: "Maintenance", details: "Provide ongoing support and maintenance to ensure the smooth operation of your digital products.", icon: FaCogs },
   ];
 
   return (
-    <div className='bg-gradient-to-tl from-[#662e9b] to-[#982aff]'>
-      <div className='max-w-[1240px] px-4 py-10 mx-auto'>
-        <h1 className='text-lg md:text-3xl py-4 text-left text-white-100 font-bold'>Our Services</h1>
-        <div className='w-full gap-8 md:flex'>
-          <div className='w-12/12 py-3 md:mx-8'>
-            <h2 className='text-lg md:text-3xl text-white-100 font-semibold'>Develop :</h2>
-            <div className='border-2 w-1/12 border-black my-1'></div>
-            <ul className='mt-2 px-8'>
-              {DevServices.map((service, index) => (
-                <li key={index} className='py-1 text-white-100'>
-                  <h3 className='font-semibold text-white-100'>{service.title}</h3>
-                  <p className='text-sm text-white-100'>{service.details}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className='w-12/12 py-3 md:mx-8'>
-            <h2 className='text-lg md:text-3xl text-white-100 font-semibold'>Design :</h2>
-            <div className='border-2 w-1/12 border-black my-1'></div>
-            <ul className='mt-2 px-8'>
-              {DesServices.map((service, index) => (
-                <li key={index} className='py-1 text-white-100'>
-                  <h3 className='font-semibold'>{service.title}</h3>
-                  <p className='text-sm'>{service.details}</p>
-                </li>
-              ))}
-            </ul>
+    <div className='max-w-[1240px] px-4 py-10 mx-auto'>
+      <h1 className='text-lg md:text-3xl py-4 text-center text-[#662e9b] font-bold'>Our Services</h1>
+      <div className='w-full gap-8 md:flex flex-wrap justify-center'>
+        <div className='w-full md:w-5/12 lg:w-4/12 py-3 md:mx-2 mx-auto'>
+          <h1 className='text-lg md:text-2xl text-black font-semibold text-center'>Develop :</h1>
+          <div className='border-2 w-1/12 border-[#662e9b] my-2 mx-auto'></div>
+          <div className='mt-4'>
+            {DevServices.map((service, index) => (
+              <div key={index} className='bg-white shadow-md rounded-lg p-4 mb-6'>
+                <div className='flex items-center mb-2'>
+                  <service.icon className='text-[#662e9b] text-xl mr-3' />
+                  <h2 className='font-semibold text-xl text-black'>{service.title}</h2>
+                </div>
+                <p className='text-sm text-gray-600'>{service.details}</p>
+              </div>
+            ))}
           </div>
         </div>
-        <div className='w-full md:w-3/4 col-span-1 md:rounded-none self-center'></div>
+        <div className='w-full md:w-5/12 lg:w-4/12 py-3 mx-2'>
+          <h1 className='text-lg md:text-2xl text-black font-semibold text-center'>Design :</h1>
+          <div className='border-2 w-1/12 border-[#662e9b] my-2 mx-auto'></div>
+          <div className='mt-4'>
+            {DesServices.map((service, index) => (
+              <div key={index} className='bg-white shadow-md rounded-lg p-4 mb-6'>
+                <div className='flex items-center mb-2'>
+                  <service.icon className='text-[#662e9b] text-xl mr-3' />
+                  <h2 className='font-semibold text-xl text-black'>{service.title}</h2>
+                </div>
+                <p className='text-sm text-gray-600'>{service.details}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

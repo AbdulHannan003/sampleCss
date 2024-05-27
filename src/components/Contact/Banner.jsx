@@ -51,7 +51,6 @@ function Banner() {
     const floatingVariants = {
         animate: {
             y: [0, 10, -10, 0],
-            x: [0, -10, 10, 0],
             transition: {
                 duration: 6,
                 ease: 'easeInOut',
@@ -66,8 +65,8 @@ function Banner() {
             style={divStyle}
             className="w-full h-[300px] md:h-[90vh] bg-cover bg-no-repeat bg-center flex"
             id='contact'>
-            <div className="max-w-[1240px] text-left font-bold self-center w-full mx-auto flex md:justify-between">
-                <div className='p-2 hidden md:block md:w-3/4'>
+            <div className="md:px-12 text-left font-bold self-center w-full mx-auto flex md:justify-between">
+                <div className='p-2 hidden md:block md:w-4/12'>
                     <motion.img
                         src={img}
                         className='w-full h-full object-contain'
@@ -76,11 +75,11 @@ function Banner() {
                         animate="animate"
                     />
                 </div>
-                <div className='col-span-1 md:w-4/4 px-12'>
+                <div className='md:w-8/12 px-4 md:px-10 self-center'>
                     <div className="md:text-7xl text-2xl py-1 md:py-2 font-serif text-[#982aff]">
                         Contact Us Today...!
                     </div>
-                    <div className=" text-white-100 md:text-3xl text-lg pl-6 md:py-4">
+                    <div className=" text-white-100 md:text-3xl text-lg pl-3 md:pl-6 md:py-4">
                         <ReactTyped
                             className='md:text-4xl py-2 text-lg md:py-4 inherit'
                             strings={[

@@ -21,9 +21,9 @@ const Tools = () => {
         triggerOnce: true,
     });
     return (
-        <div className='max-w-[1240px] px-4 py-10 md:mx-auto text-center' ref={ref}>
-            <div className='text-[#662e9b] font-bold md:text-4xl py-1 text-lg md:py-3 md:flex justify-center' ref={typedRef}>
-                <h1 className='text-lg md:text-4xl py-4 md:text-left text-black font-semibold'>Empowering Businesses with a</h1>
+        <div className='px-4 py-10 md:mx-auto text-center' ref={ref}>
+            <div className='text-white-100 bg-gradient-to-tl from-[#662e9b] to-[#982aff] font-bold md:text-4xl py-1 text-lg md:py-3 md:flex justify-center border' ref={typedRef}>
+                <h1 className='text-lg md:text-4xl py-4 md:text-left text-white-100 font-semibold'>Empowering Businesses with a</h1>
                 {inView && (
                     <ReactTyped
                         strings={["multitude of tools..."]}
@@ -32,7 +32,7 @@ const Tools = () => {
                     />
                 )}
             </div>
-            <div className='font-semibold p-4 md:text-4xl py-1 text-lg md:py-3 justify-center'>
+            <div className='font-semibold p-4 md:text-4xl py-1 text-lg md:py-3 justify-center max-w-[1024px] mx-auto'>
                 <h1 className='pb-1 text-black'>Frameworks</h1>
                 <div className='border-2 w-2/12 border-[#662e9b] my-1 mx-auto'></div>
                 <div className='mx-auto flex py-10 my-6 md:my-10'>

@@ -1,17 +1,17 @@
 import React from 'react';
 import { ReactTyped } from "react-typed";
-import backgroundImage from '../../assets/servicebanner.png';
+import backgroundImage from '../../assets/servicebanner.jpg';
 
 function Banner() {
     const divStyle = {
-        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))  , url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.0)), linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.0))  , url(${backgroundImage})`,
     };
     return (
         <div
             style={divStyle}
-            className="w-full h-[300px] md:h-[90vh] bg-cover bg-no-repeat bg-center md:flex justify-center md:justify-end">
-            <div className="max-w-[1240px] text-left font-bold h-full content-center w-full md:w-auto">
-                <div className='col-span-1 md:w-[800px] mx-3 px-10'>
+            className="w-full h-[300px] md:h-[90vh] bg-cover bg-no-repeat bg-center md:bg-center md:flex justify-center">
+            <div className="max-w-[1240px] text-left font-bold h-full content-center w-full">
+                <div className='mx-3 px-10'>
                     <div className="md:text-4xl w-full text-lg text-white-100 pl-4 md:py-3">
                         <h2>Web & Design</h2>
                     </div>

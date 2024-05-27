@@ -14,7 +14,9 @@ function Banner() {
                     We build
                 </div>
                 <div className="md:text-7xl text-2xl py-1 md:py-2 font-serif text-[#982aff]">
-                    Websites & much more.
+                    <h1>
+                        Websites & much more.
+                    </h1>
                 </div>
                 <div className="text-white-100 md:text-4xl text-lg py-1 px-3 md:px-12 md:py-3">
                     We are here to <span> </span>

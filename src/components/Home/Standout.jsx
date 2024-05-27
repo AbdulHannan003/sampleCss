@@ -15,7 +15,7 @@ const Standout = () => {
                 <h3 className='text-xl md:text-4xl font-semibold px-4 md:px-12 text-black'>No Reloads</h3>
                 <motion.div initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -250 }}
-                    transition={{ duration: 1 }} ref={ref} className='text-[#662e9b] text-4xl md:text-7xl font-bold font-sans'> Just React!</motion.div>
+                    transition={{ duration: 2 }} ref={ref} className='text-[#662e9b] text-4xl md:text-7xl font-bold font-sans ease-in-out'> Just React!</motion.div>
                 <p className='py-6 px-4 md:px-12 text-lg md:text-xl md:w-3/4'>
                     Maintaining continious interactivity without page reloads? You bet! With React, We keep web experience
                     alive and dynamic, ensuring user are engaged and delighted every step of the way.
