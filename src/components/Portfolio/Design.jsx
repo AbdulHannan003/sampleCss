@@ -32,6 +32,15 @@ const Design = () => {
     const handleProjectClick = (index) => {
         setSelectedProjectIndex(index);
         setShowModal(true);
+        // Remove the existing source
+        const imageElements = document.querySelectorAll('.project-image');
+        imageElements.forEach((image) => {
+            image.src = '';
+        });
+        // Update the new source
+        const projectData = project === 'logo' ? logoProjects : project === 'web' ? webProjects : brandProjects;
+        const imageElement = document.querySelector('.project-image');
+        imageElement.src = projectData[index].url;
     };
 
     const closeModal = () => {
@@ -117,13 +126,10 @@ const Design = () => {
 
     let projectData;
     if (project === "logo") {
-        projectData = " ";
         projectData = logoProjects;
     } else if (project === "web") {
-        projectData = " ";
         projectData = webProjects;
     } else if (project === "brand") {
-        projectData = " ";
         projectData = brandProjects;
     }
 
