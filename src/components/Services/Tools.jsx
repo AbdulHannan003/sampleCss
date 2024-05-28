@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ReactTyped } from 'react-typed';
 import bs from '../../assets/logos/bootstrap.png';
-import ai from '../../assets/logos/ai.png';
+import ai from '../../assets/logos/ai.webp';
 import tw from '../../assets/logos/tailwind.png';
 import np from '../../assets/logos/numpy.png';
 import xl from '../../assets/logos/openpyxl.png';
@@ -12,11 +12,11 @@ import js from '../../assets/logos/javascript.png';
 import py from '../../assets/logos/python.png';
 import react from '../../assets/logos/react.png';
 import figma from '../../assets/logos/figma.png';
-import ps from '../../assets/logos/ps.png';
+import ps from '../../assets/logos/ps.webp';
 
 const toolsData = [
     { src: bs, alt: "Bootstrap logo", label: "Bootstrap" },
-    { src: ai, alt: "AI logo", label: "React" },
+    { src: ai, alt: "Adobe Illustrator logo", label: "React" },
     { src: tw, alt: "Tailwind logo", label: "Tailwind" },
     { src: np, alt: "Numpy logo", label: "Numpy" },
     { src: xl, alt: "Openpyxl logo", label: "Openpyxl" },
