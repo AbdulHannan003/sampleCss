@@ -166,7 +166,7 @@ const Design = () => {
                         <img
                             src={project.urlJpg}
                             alt={project.alt}
-                            className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-90 cursor-pointer'
+                            className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105 cursor-pointer'
                             onClick={() => handleProjectClick(index)}
                             height={100}
                             width={100}
