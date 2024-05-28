@@ -188,6 +188,10 @@ const Design = () => {
                             alt={project.alt}
                             className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105 cursor-pointer'
                             onClick={() => handleProjectClick(index)}
+                            height={100}
+                            width={100}
+                            loading="lazy"
+                            style={{ aspectRatio: "7/5" }}
                         />
                     </div>
                 ))}
@@ -198,7 +202,7 @@ const Design = () => {
                         <button className="absolute top-4 right-4 text-white text-2xl focus:outline-none" onClick={closeModal}>
                             &times;
                         </button>
-                        <img src={projectData[selectedProjectIndex].url} alt={projectData[selectedProjectIndex].alt} className="w-full h-full object-contain" />
+                        <img src={projectData[selectedProjectIndex].url} alt={projectData[selectedProjectIndex].alt} height={100} width={100} loading="lazy" style={{ aspectRatio: "1/1" }} className="w-full h-full object-contain" />
                     </div>
                 </div>
             )}

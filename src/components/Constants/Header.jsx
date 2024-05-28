@@ -67,7 +67,7 @@ function Header() {
                 >
                     <motion.div className='w-[55px] h-[55px] flex' variants={itemVariants}>
                         <motion.div className='w-[30px] mx-auto self-center md:w-[55px] h-[30px] md:h-[55px]' variants={logoVariant} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false }}>
-                            <img src={saskaLogo} alt="" className='h-full w-full content-center' />
+                            <img src={saskaLogo} height={55} width={55} loading='lazy' style={{ aspectRatio: '1 / 1' }} alt="Logo" className='h-full w-full content-center' />
                         </motion.div>
                     </motion.div>
                     <motion.div className='h-[50px] border-x-2 hidden md:flex border-white-100 mx-2' variants={itemVariants} transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', repeatDelay: 2, yoyo: false }}></motion.div>

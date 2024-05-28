@@ -30,9 +30,13 @@ function Banner() {
                     <motion.img
                         src={img}
                         className='w-full h-full object-contain'
-                        alt=""
+                        alt="Contact Banner Img"
                         variants={floatingVariants}
                         animate="animate"
+                        style={{ aspectRatio: '1 / 1' }}
+                        height={300}
+                        width={300}
+                        loading="lazy"
                     />
                 </div>
                 <div className='md:w-8/12 px-4 md:px-10 self-center'>
