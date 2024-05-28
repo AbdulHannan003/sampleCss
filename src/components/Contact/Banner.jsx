@@ -30,7 +30,7 @@ function Banner() {
                     <motion.img
                         src={img}
                         className='w-full h-full object-contain'
-                        alt="Contact Banner Img"
+                        alt="Contact Us Img"
                         variants={floatingVariants}
                         animate="animate"
                         style={{ aspectRatio: '1 / 1' }}

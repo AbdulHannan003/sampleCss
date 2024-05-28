@@ -1,23 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import ai from '../../assets/logos/ai.png';
+import ai from '../../assets/logos/ai.webp';
 import css from '../../assets/logos/css.png';
 import html5 from '../../assets/logos/html5.png';
-import mongo from '../../assets/logos/mongo.png';
+import mongo from '../../assets/logos/mongo.webp';
 import node from '../../assets/logos/node.png';
-import ps from '../../assets/logos/ps.png';
+import ps from '../../assets/logos/ps.webp';
 import reactLogo from '../../assets/logos/react.png';
 import tailwind from '../../assets/logos/tailwind.png';
 
 const logos = [
-    { src: ai, alt: "AI logo", label: "React" },
+    { src: ai, alt: "React logo", label: "React" },
     { src: css, alt: "CSS logo", label: "CSS" },
     { src: html5, alt: "HTML5 logo", label: "HTML5" },
     { src: mongo, alt: "MongoDB logo", label: "MongoDB" },
     { src: node, alt: "Node.js logo", label: "Node JS" },
     { src: ps, alt: "Photoshop logo", label: "Photoshop" },
-    { src: reactLogo, alt: "React logo", label: "Illustrator" },
+    { src: reactLogo, alt: "Adobe Illustrator logo", label: "Illustrator" },
     { src: tailwind, alt: "Tailwind CSS logo", label: "Tailwind CSS" },
 ];
 
