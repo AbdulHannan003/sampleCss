@@ -384,11 +384,11 @@ const Design = () => {
             </div>
             <div className='w-full grid gap-4 md:grid-cols-3 md:gap-8 mt-8'>
                 {projectData.map((project, index) => (
-                    <div key={index} className='relative overflow-hidden rounded-md shadow-lg'>
+                    <div key={index} className='overflow-hidden rounded-md shadow-lg'>
                         <img
                             src={project.urlJpg}
                             alt={project.alt}
-                            className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-110 cursor-pointer'
+                            className='w-full h-full object-cover object-center cursor-pointer'
                             onClick={() => handleProjectClick(index)}
                             height={100}
                             width={100}
