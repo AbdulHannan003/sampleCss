@@ -29,10 +29,10 @@ const Provide = () => {
             {DevServices.map((service, index) => (
               <div key={index} className='bg-white shadow-md rounded-lg p-4 mb-6'>
                 <div className='flex items-center mb-2'>
-                  <service.icon className='text-[#662e9b] text-xl mr-3' />
-                  <h2 className='font-semibold text-xl text-black'>{service.title}</h2>
+                  <service.icon className='text-[#662e9b] md:text-xl mr-3' />
+                  <h2 className='font-semibold md:text-xl text-black'>{service.title}</h2>
                 </div>
-                <p className='text-sm text-gray-600'>{service.details}</p>
+                <p className='text-xs md:text-sm text-gray-600'>{service.details}</p>
               </div>
             ))}
           </div>
@@ -44,10 +44,10 @@ const Provide = () => {
             {DesServices.map((service, index) => (
               <div key={index} className='bg-white shadow-md rounded-lg p-4 mb-6'>
                 <div className='flex items-center mb-2'>
-                  <service.icon className='text-[#662e9b] text-xl mr-3' />
-                  <h2 className='font-semibold text-xl text-black'>{service.title}</h2>
+                  <service.icon className='text-[#662e9b] md:text-xl mr-3' />
+                  <h2 className='font-semibold md:text-xl text-black'>{service.title}</h2>
                 </div>
-                <p className='text-sm text-gray-600'>{service.details}</p>
+                <p className='text-xs md:text-sm text-gray-600'>{service.details}</p>
               </div>
             ))}
           </div>

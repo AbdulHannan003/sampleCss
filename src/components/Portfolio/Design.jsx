@@ -117,10 +117,13 @@ const Design = () => {
 
     let projectData;
     if (project === "logo") {
+        projectData = " ";
         projectData = logoProjects;
     } else if (project === "web") {
+        projectData = " ";
         projectData = webProjects;
     } else if (project === "brand") {
+        projectData = " ";
         projectData = brandProjects;
     }
 
@@ -190,7 +193,6 @@ const Design = () => {
                             onClick={() => handleProjectClick(index)}
                             height={100}
                             width={100}
-                            loading="lazy"
                             style={{ aspectRatio: "7/5" }}
                         />
                     </div>
