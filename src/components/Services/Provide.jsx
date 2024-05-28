@@ -37,7 +37,7 @@ const Provide = () => {
             ))}
           </div>
         </div>
-        <div className='w-full md:w-5/12 lg:w-4/12 py-3 mx-2'>
+        <div className='w-full md:w-5/12 lg:w-4/12 py-3 md:mx-2 mx-auto'>
           <h1 className='text-lg md:text-2xl text-black font-semibold text-center'>Design :</h1>
           <div className='border-2 w-1/12 border-[#662e9b] my-2 mx-auto'></div>
           <div className='mt-4'>
