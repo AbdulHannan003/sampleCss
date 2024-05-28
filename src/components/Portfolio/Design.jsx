@@ -228,17 +228,36 @@ import temp3 from '../../assets/PortfolioWeb/web4.png';
 import temp4 from '../../assets/PortfolioWeb/web5.png';
 import temp5 from '../../assets/PortfolioWeb/web6.png';
 import temp6 from '../../assets/PortfolioWeb/web7.png';
+import temp1jpg from '../../assets/PortfolioWeb/web2.jpg';
+import temp2jpg from '../../assets/PortfolioWeb/web3.jpg';
+import temp3jpg from '../../assets/PortfolioWeb/web4.jpg';
+import temp4jpg from '../../assets/PortfolioWeb/web5.jpg';
+import temp5jpg from '../../assets/PortfolioWeb/web6.jpg';
+import temp6jpg from '../../assets/PortfolioWeb/web7.jpg';
+
 import brand1 from '../../assets/PortfolioBrands/Banners.png';
 import brand2 from '../../assets/PortfolioBrands/Standee.png';
 import brand3 from '../../assets/PortfolioBrands/card2.png';
 import brand4 from '../../assets/PortfolioBrands/card1.png';
 import brand5 from '../../assets/PortfolioBrands/brochure1.png';
+import brand1jpg from '../../assets/PortfolioBrands/Banners.jpg';
+import brand2jpg from '../../assets/PortfolioBrands/Standee.jpg';
+import brand3jpg from '../../assets/PortfolioBrands/card2.jpg';
+import brand4jpg from '../../assets/PortfolioBrands/card1.jpg';
+import brand5jpg from '../../assets/PortfolioBrands/brochure1.jpg';
+
 import logo1 from '../../assets/PortfolioLogos/logotemp1.png';
 import logo2 from '../../assets/PortfolioLogos/logotemp2.png';
 import logo3 from '../../assets/PortfolioLogos/logotemp3.png';
 import logo4 from '../../assets/PortfolioLogos/logotemp4.png';
 import logo5 from '../../assets/PortfolioLogos/logotemp5.png';
 import logo6 from '../../assets/PortfolioLogos/logotemp6.png';
+import logo1jpg from '../../assets/PortfolioLogos/logotemp1.jpg';
+import logo2jpg from '../../assets/PortfolioLogos/logotemp2.jpg';
+import logo3jpg from '../../assets/PortfolioLogos/logotemp3.jpg';
+import logo4jpg from '../../assets/PortfolioLogos/logotemp4.jpg';
+import logo5jpg from '../../assets/PortfolioLogos/logotemp5.jpg';
+import logo6jpg from '../../assets/PortfolioLogos/logotemp6.jpg';
 
 const Design = () => {
     const word = "Design";
@@ -252,29 +271,29 @@ const Design = () => {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
     const logoProjects = [
-        { url: logo1, alt: "Logo Template" },
-        { url: logo2, alt: "Logo Template" },
-        { url: logo3, alt: "Logo Template" },
-        { url: logo4, alt: "Logo Template" },
-        { url: logo5, alt: "Logo Template" },
-        { url: logo6, alt: "Logo Template" },
+        { urlPng: logo1, urlJpg: logo1jpg, alt: "Logo Template" },
+        { urlPng: logo2, urlJpg: logo2jpg, alt: "Logo Template" },
+        { urlPng: logo3, urlJpg: logo3jpg, alt: "Logo Template" },
+        { urlPng: logo4, urlJpg: logo4jpg, alt: "Logo Template" },
+        { urlPng: logo5, urlJpg: logo5jpg, alt: "Logo Template" },
+        { urlPng: logo6, urlJpg: logo6jpg, alt: "Logo Template" },
     ];
 
     const webProjects = [
-        { url: temp1, alt: "Web Template" },
-        { url: temp2, alt: "Web Template" },
-        { url: temp3, alt: "Web Template" },
-        { url: temp4, alt: "Web Template" },
-        { url: temp5, alt: "Web Template" },
-        { url: temp6, alt: "Web Template" },
+        { urlPng: temp1, urlJpg: temp1jpg, alt: "Web Template" },
+        { urlPng: temp2, urlJpg: temp2jpg, alt: "Web Template" },
+        { urlPng: temp3, urlJpg: temp3jpg, alt: "Web Template" },
+        { urlPng: temp4, urlJpg: temp4jpg, alt: "Web Template" },
+        { urlPng: temp5, urlJpg: temp5jpg, alt: "Web Template" },
+        { urlPng: temp6, urlJpg: temp6jpg, alt: "Web Template" },
     ];
 
     const brandProjects = [
-        { url: brand1, alt: "AD Banners" },
-        { url: brand2, alt: "Standee" },
-        { url: brand3, alt: "Business Card" },
-        { url: brand4, alt: "Business Card" },
-        { url: brand5, alt: "Brochure" },
+        { urlPng: brand1, urlJpg: brand1jpg, alt: "AD Banners" },
+        { urlPng: brand2, urlJpg: brand2jpg, alt: "Standee" },
+        { urlPng: brand3, urlJpg: brand3jpg, alt: "Business Card" },
+        { urlPng: brand4, urlJpg: brand4jpg, alt: "Business Card" },
+        { urlPng: brand5, urlJpg: brand5jpg, alt: "Brochure" },
     ];
 
     let projectData;
@@ -290,10 +309,9 @@ const Design = () => {
         const preloadImages = (images) => {
             images.forEach((image) => {
                 const img = new Image();
-                img.src = image.url;
+                img.src = image.urlPng;
             });
         };
-
         preloadImages(logoProjects);
         preloadImages(webProjects);
         preloadImages(brandProjects);
@@ -368,7 +386,7 @@ const Design = () => {
                 {projectData.map((project, index) => (
                     <div key={index} className='relative overflow-hidden rounded-md shadow-lg'>
                         <img
-                            src={project.url}
+                            src={project.urlJpg}
                             alt={project.alt}
                             className='w-full h-full object-cover transition-transform duration-300 transform hover:scale-105 cursor-pointer'
                             onClick={() => handleProjectClick(index)}
@@ -385,7 +403,7 @@ const Design = () => {
                         <button className="absolute top-4 right-4 text-white text-2xl focus:outline-none" onClick={closeModal}>
                             &times;
                         </button>
-                        <img src={projectData[selectedProjectIndex].url} alt={projectData[selectedProjectIndex].alt} height={100} width={100} style={{ aspectRatio: "1/1" }} className="w-full h-full object-contain project-image" />
+                        <img src={projectData[selectedProjectIndex].urlPng} alt={projectData[selectedProjectIndex].alt} height={100} width={100} style={{ aspectRatio: "1/1" }} className="w-full h-full object-contain project-image" />
                     </div>
                 </div>
             )}
