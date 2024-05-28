@@ -23,12 +23,19 @@ const Standout = () => {
                         From seamless transitions to interactive elements, our expertise in React ensures your business shine with modernity and sophistication.
                     </span>
                     <Link to={'/portfolio'}>
-                        <button className='text-sm md:text-base font-semibold border-2 md:px-12 border-[#662e9b] mt-2 px-2 flex flex-row py-1 rounded-full text-[#662e9b] hover:text-white-100 hover:bg-[#662e9b] duration-300 items-center'>Portfolio<span className='pl-2 text-base md:text-2xl'><AiFillCaretRight /></span></button>
+                        <button className='text-sm md:text-base font-semibold border-2 border-[#662e9b] mt-3 md:px-2 px-4 flex flex-row md:py-2 py-3 rounded-full text-[#662e9b] hover:text-white-100 hover:bg-[#662e9b] duration-300 items-center'>Portfolio<span className='pl-2 text-base md:text-2xl'><AiFillCaretRight /></span></button>
                     </Link>
                 </p>
             </div>
             <div className='md:w-[90%] mx-auto'>
-                <img src={squareimg} alt="" className='object-cover h-[400px] w-[500px]' />
+                <img
+                    src={squareimg}
+                    alt="React Image"
+                    className='object-cover h-[400px] w-[500px]'
+                    height="400"
+                    width="500"
+                    style={{ aspectRatio: '4/5' }}
+                />
             </div>
         </div>
     )

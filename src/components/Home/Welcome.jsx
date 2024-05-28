@@ -13,12 +13,16 @@ function Welcome() {
             <div className='col-span-1 md:w-[60%] h-full overflow-hidden md:overflow-visible mx-auto'>
                 <img
                     src={web}
-                    alt=""
+                    alt="Welcome Image"
+                    width="400"
+                    height="500"
                     className='object-cover object-center'
+                    loading="lazy"
+                    style={{ aspectRatio: '5/4' }}
                 />
             </div>
             <div className='col-span-1 p-4 flex flex-col justify-center' ref={ref}>
-                <div className='text-[#662e9b] font-bold md:text-3xl py-1 text-xl md:py-3' ref={typedRef}>
+                <div className='text-[#662e9b] font-bold md:text-3xl py-1 text-xl md:py-3 min-h-[2em]' ref={typedRef}>
                     {inView && (
                         <ReactTyped
                             strings={["Welcome to the next level !"]}
@@ -27,12 +31,12 @@ function Welcome() {
                     )}
                 </div>
                 <div className='py-4'>
-                    <span className='text-sm md:text-base line-clamp-4'>
+                    <p className='text-sm md:text-base line-clamp-4'>
                         SASKA Solutions is a technology consultancy and solutions provider company, offering expert services in front-end and back-end development, UI and UX design, and automation solutions.
-                    </span>
-                    <span className='pt-5 text-sm md:text-base line-clamp-3'>
+                    </p>
+                    <p className='pt-5 text-sm md:text-base line-clamp-3'>
                         Our mission is to empower businesses to succeed in the digital age by providing innovative, effective, and efficient technology solutions.
-                    </span>
+                    </p>
                 </div>
             </div>
         </div>

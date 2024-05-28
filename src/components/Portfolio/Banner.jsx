@@ -47,7 +47,11 @@ function Banner() {
                     <motion.img
                         src={img}
                         className='w-full h-full object-contain self-center'
-                        alt=""
+                        alt="Portfolio Banner Img"
+                        loading='lazy'
+                        height={70}
+                        width={70}
+                        style={{ aspectRatio: '5/4' }}
                         variants={floatingVariants}
                         animate="animate" />
                 </div>
