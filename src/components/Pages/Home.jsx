@@ -11,9 +11,9 @@ const Home = () => {
         <>
             <Banner />
             <Welcome />
-            <Plan />
-            <Standout />
             <Logo />
+            <Standout />
+            <Plan />
             <Contact />
         </>
     )
