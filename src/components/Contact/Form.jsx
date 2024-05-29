@@ -9,6 +9,13 @@ const Form = () => {
     const [phone, setPhone] = useState('');
     const [phoneError, setPhoneError] = useState('');
     const [emailError, setEmailError] = useState('');
+    const [formValues, setFormValues] = useState({
+        fullName: '',
+        company: '',
+        email: '',
+        howDidYouHear: '',
+        message: '',
+    });
 
     const validateEmail = (email) => {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -20,15 +27,25 @@ const Form = () => {
         return phonePattern.test(phone);
     };
 
-    const handleChangePhone = (e) => {
-        const { value } = e.target;
-        const onlyNumbers = value.replace(/[^0-9+\s-]/g, '');
-        setPhone(onlyNumbers);
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormValues({ ...formValues, [name]: value });
 
-        if (!validatePhone(onlyNumbers)) {
-            setPhoneError('Please enter a valid phone number');
-        } else {
-            setPhoneError('');
+        if (name === 'phone') {
+            const onlyNumbers = value.replace(/[^0-9+\s-]/g, '');
+            setPhone(onlyNumbers);
+            setFormValues({ ...formValues, phone: onlyNumbers });
+            if (!validatePhone(onlyNumbers)) {
+                setPhoneError('Please enter a valid phone number');
+            } else {
+                setPhoneError('');
+            }
+        } else if (name === 'email') {
+            if (!validateEmail(value)) {
+                setEmailError('Please enter a valid email address');
+            } else {
+                setEmailError('');
+            }
         }
     };
 
@@ -53,106 +70,78 @@ const Form = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        const email = form.current.email.value;
-        const isEmailValid = validateEmail(email);
+        const isEmailValid = validateEmail(formValues.email);
         const isPhoneValid = validatePhone(phone);
-
-        if (!isEmailValid) {
-            setEmailError('Please enter a valid email address');
-        } else {
-            setEmailError('');
-        }
 
         if (isEmailValid && isPhoneValid) {
             emailjs.sendForm('service_htvfes9', 'template_lihw05o', form.current, '8GvgYzGjkwINOneAo')
                 .then((result) => {
                     console.log(result.text);
                     showModal('Message Sent Successfully', 'Your message has been sent successfully. We will get back to you as soon as possible.');
+                    setFormValues({
+                        fullName: '',
+                        company: '',
+                        email: '',
+                        phone: '',
+                        howDidYouHear: '',
+                        message: '',
+                    });
                 }, (error) => {
                     console.log(error.text);
                     showModal('Failed to Send Message', 'Failed to send your message. Please try again.');
                 });
         } else {
-            if (!isPhoneValid) {
-                setPhoneError('Please enter a valid phone number');
-            }
             showModal('Invalid Input', 'Please correct the errors in the form before submitting');
         }
     };
 
     return (
-        <div className=''>
+        <div className='mx-4 bg-white-100'>
             <div className='max-w-[1240px] justify-around px-4 py-10 md:flex mx-auto'>
                 <div className='p-2 w-full md:w-1/2 py-24 h-auto'>
                     <p className='text-xl text-black font-semibold'>Contact us</p>
                     <h1 className='text-3xl p-2 italic text-center font-semibold my-2 text-white-100 bg-[#662e9b] rounded-xl shadow-xl font-serif'>"Don't Wait, Create Your Success"</h1>
                 </div>
                 <form ref={form} onSubmit={sendEmail} className="bg-[#662e9b] w-full md:w-1/2 md:mx-[80px] p-4 pt-6 mb-4 border-black border-2 rounded-xl duration-300 hover:shadow-2xl">
+                    <FormInput
+                        label="Full Name"
+                        type="text"
+                        name="fullName"
+                        value={formValues.fullName}
+                        onChange={handleChange}
+                        placeholder="John Doe"
+                        required
+                    />
+                    <FormInput
+                        label="Company"
+                        type="text"
+                        name="company"
+                        value={formValues.company}
+                        onChange={handleChange}
+                        placeholder="ABC ltd."
+                        required
+                    />
+                    <FormInput
+                        label="Email"
+                        type="email"
+                        name="email"
+                        value={formValues.email}
+                        onChange={handleChange}
+                        placeholder="xyz@abc.com"
+                        error={emailError}
+                        required
+                    />
+                    <FormInput
+                        label="Phone"
+                        type="tel"
+                        name="phone"
+                        value={phone}
+                        onChange={handleChange}
+                        placeholder="+00 000 000 0000"
+                        error={phoneError}
+                        required
+                    />
                     <div className="flex flex-wrap mb-6">
-                        <div className="w-full md:w-full px-3">
-                            <label className="block tracking-wide text-white-100 text-sm font-semibold mb-2" htmlFor="full-name">
-                                Full Name
-                            </label>
-                            <input
-                                placeholder='John Doe'
-                                className="appearance-none text-sm block w-full bg-white-100 text-gray-500 border border-black rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white"
-                                id="full-name"
-                                type="text"
-                                name="from_fullName"
-                                required
-                            />
-                        </div>
-                    </div>
-                    <div className="flex flex-wrap  mb-6">
-                        <div className="w-full px-3">
-                            <label className="block tracking-wide text-white-100 text-sm font-semibold mb-2" htmlFor="company">
-                                Company
-                            </label>
-                            <input
-                                placeholder='ABC ltd.'
-                                className="appearance-none text-sm block w-full bg-white-100 text-gray-500 border border-black rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white"
-                                id="company"
-                                type="text"
-                                name="company"
-                                required
-                            />
-                        </div>
-                    </div>
-                    <div className="flex flex-wrap  mb-6">
-                        <div className="w-full px-3">
-                            <label className="block tracking-wide text-white-100 text-sm font-semibold mb-2" htmlFor="email">
-                                Email
-                            </label>
-                            <input
-                                placeholder='xyz@abc.com'
-                                className="appearance-none text-sm block w-full bg-white-100 text-gray-500 border border-black rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white"
-                                id="email"
-                                type="email"
-                                name="email"
-                                required
-                            />
-                            {emailError && <p className="text-red-500 text-xs mt-1">{emailError}</p>}
-                        </div>
-                    </div>
-                    <div className="flex flex-wrap  mb-6">
-                        <div className="w-full px-3">
-                            <label className="block tracking-wide text-white-100 text-sm font-semibold mb-2" htmlFor="phone">
-                                Phone
-                            </label>
-                            <input
-                                placeholder='+00 000 000 0000'
-                                className="appearance-none text-sm block w-full bg-white-100 text-gray-500 border border-black rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white"
-                                id="phone"
-                                type='tel'
-                                name="phone"
-                                value={phone}
-                                onChange={handleChangePhone}
-                                required
-                            />
-                            {phoneError && <p className="text-red-500 text-xs mt-1">{phoneError}</p>}
-                        </div>
-                    </div>
-                    <div className="flex flex-wrap  mb-6">
                         <div className="w-full px-3">
                             <label className="block tracking-wide text-white-100 text-sm font-semibold mb-2" htmlFor="how-did-you-hear-about-us">
                                 How did you hear about us?
@@ -161,7 +150,9 @@ const Form = () => {
                                 <select
                                     className="block appearance-none w-full text-sm bg-white-100 border border-black text-gray-500 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white"
                                     id="how-did-you-hear-about-us"
-                                    name="how_did_you_hear"
+                                    name="howDidYouHear"
+                                    value={formValues.howDidYouHear}
+                                    onChange={handleChange}
                                     required
                                 >
                                     <option className='text-black' value="">Select an option</option>
@@ -182,19 +173,13 @@ const Form = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-wrap  mb-6">
-                        <div className="w-full px-3">
-                            <label className="block tracking-wide text-white-100 text-sm font-semibold mb-2" htmlFor="message">
-                                Message
-                            </label>
-                            <textarea
-                                className="block text-sm w-full bg-white-100 text-gray-500 border border-black rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white"
-                                id="message"
-                                name="message"
-                                required
-                            />
-                        </div>
-                    </div>
+                    <FormTextarea
+                        label="Message"
+                        name="message"
+                        value={formValues.message}
+                        onChange={handleChange}
+                        required
+                    />
                     <div className="text-white-100 flex justify-center px-12 md:text-lg py-1">
                         <button
                             type="submit"
@@ -208,5 +193,44 @@ const Form = () => {
         </div>
     );
 };
+
+const FormInput = ({ label, type, name, value, onChange, placeholder, error, required }) => (
+    <div className="flex flex-wrap mb-6">
+        <div className="w-full px-3">
+            <label className="block tracking-wide text-white-100 text-sm font-semibold mb-2" htmlFor={name}>
+                {label}
+            </label>
+            <input
+                className="appearance-none text-sm block w-full bg-white-100 text-gray-500 border border-black rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white"
+                id={name}
+                type={type}
+                name={name}
+                value={value}
+                onChange={onChange}
+                placeholder={placeholder}
+                required={required}
+            />
+            {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
+        </div>
+    </div>
+);
+
+const FormTextarea = ({ label, name, value, onChange, required }) => (
+    <div className="flex flex-wrap mb-6">
+        <div className="w-full px-3">
+            <label className="block tracking-wide text-white-100 text-sm font-semibold mb-2" htmlFor={name}>
+                {label}
+            </label>
+            <textarea
+                className="block text-sm w-full bg-white-100 text-gray-500 border border-black rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white"
+                id={name}
+                name={name}
+                value={value}
+                onChange={onChange}
+                required={required}
+            />
+        </div>
+    </div>
+);
 
 export default Form;

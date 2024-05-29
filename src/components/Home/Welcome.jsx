@@ -9,7 +9,7 @@ function Welcome() {
         triggerOnce: true,
     });
     return (
-        <div className='max-w-[1240] p-4 mx-auto md:my-10 md:grid grid-cols-2'>
+        <div className='max-w-[1240px] m-4 p-4 mx-auto md:py-10 md:grid grid-cols-2 bg-white-200 border border-neutral-100 shadow-[0_0_15px_0_rgba(0,0,0,0.2)] rounded'>
             <div className='col-span-1 md:w-[60%] h-full overflow-hidden md:overflow-visible mx-auto'>
                 <img
                     src={web}
