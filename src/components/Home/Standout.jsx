@@ -99,7 +99,7 @@ const Standout = () => {
                         <span className='hidden sm:inline'>
                             Faster load times, optimized images, and streamlined code all contribute to keeping your audience engaged without any lag.
                         </span>
-                        <Link to='/about'>
+                        <Link to='/services'>
                             <button className='text-sm md:text-base font-semibold border-2 border-[#662e9b] mt-3 md:px-2 px-4 flex flex-row md:py-2 py-3 rounded-full text-[#662e9b] hover:text-white-100 hover:bg-[#662e9b] duration-300 items-center'>
                                 Learn More<span className='pl-2 text-base md:text-2xl'><AiFillCaretRight /></span>
                             </button>
