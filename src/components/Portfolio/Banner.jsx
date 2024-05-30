@@ -22,8 +22,8 @@ function Banner() {
 
     return (
         <div style={divStyle} className="w-full content-center bg-cover bg-opacity-30 bg-no-repeat bg-center h-[300px] md:h-[90vh]">
-            <div className='md:flex md:justify-between md:px-4 md:w-[1240px] mx-auto'>
-                <div className='text-left font-bold self-center mx-3 md:mx-1 md:w-2/4'>
+            <div className='md:flex md:justify-between md:px-4'>
+                <div className='text-left font-bold self-center mx-3 md:mx-auto md:w-6/12'>
                     <div className="md:text-4xl text-lg text-white-100 md:mx-5 mx-3 md:py-3">
                         Check Out
                     </div>
@@ -43,7 +43,7 @@ function Banner() {
                         ></ReactTyped>
                     </div>
                 </div>
-                <div className='p-2 hidden md:flex w-2/4 h-[70vh]'>
+                <div className='p-2 hidden md:flex w-4/12 h-[70vh] mx-auto'>
                     <motion.img
                         src={img}
                         className='w-full h-full object-contain self-center'
