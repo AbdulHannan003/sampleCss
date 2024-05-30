@@ -141,7 +141,7 @@ const Design = () => {
                         </motion.span>
                     ))}
                 </div>
-                <div className="text-center p-2 col-span-1 mx-auto w-2/4 md:w-10/12">
+                <div className="text-center p-2 col-span-1 mx-auto w-4/4 md:w-10/12">
                     <h1 className="text-center py-4 md:text-4xl text-xl font-bold text-white-100">
                         Have a look at our work for our customers
                     </h1>
