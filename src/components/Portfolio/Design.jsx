@@ -129,7 +129,7 @@ const Design = () => {
     return (
         <div className='w-full border border-[#662e9b] bg-gradient-to-r from-[#662e9b] to-[#982aff] relative'>
             <div className="max-w-[1240px] text-center p-0 mx-auto md:my-10 md:flex">
-                <div className="pt-[150px] my-2 text-white-100 md:flex -rotate-[-90deg] text-7xl font-serif font-bold col-span-1 w-1/4 overflow-visible hidden ">
+                <div className="my-auto text-white-100 md:flex -rotate-[-90deg] text-6xl md:text-6xl font-serif font-bold col-span-1 w-1/4 md:h-[50px] overflow-visible hidden">
                     {letters1.map((letter, index) => (
                         <motion.span
                             key={index}
@@ -141,7 +141,7 @@ const Design = () => {
                         </motion.span>
                     ))}
                 </div>
-                <div className="text-center p-2 col-span-1 md:w-2/4">
+                <div className="text-center p-2 col-span-1 mx-auto w-2/4 md:w-10/12">
                     <h1 className="text-center py-4 md:text-4xl text-xl font-bold text-white-100">
                         Have a look at our work for our customers
                     </h1>
@@ -149,7 +149,7 @@ const Design = () => {
                         We make sure to deliver high quality work for customers that is according to their demands. Catch a glimpse of our portfolio
                     </p>
                 </div>
-                <div className="pt-[140px] text-white-100 pl-[60px] md:inline -rotate-90 text-7xl font-serif font-bold col-span-1 w-1/4 overflow-visible hidden ">
+                <div className="my-auto text-white-100 pl-[60px] md:inline -rotate-90 text-6xl md:text-6xl font-serif font-bold col-span-1 w-1/4 md:h-[50px] overflow-visible hidden">
                     {letters.map((letter, index) => (
                         <motion.span
                             key={index}
@@ -182,7 +182,7 @@ const Design = () => {
                     Branding
                 </button>
             </div>
-            <div className='w-full grid gap-4 md:grid-cols-3 md:gap-8 mt-8 px-4'>
+            <div className='w-full grid gap-4 md:grid-cols-3 md:gap-8 mt-8 px-4 border'>
                 {projectData.map((project, index) => (
                     <motion.div
                         whileHover={{ scale: 1.05 }}
@@ -200,8 +200,16 @@ const Design = () => {
                         <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-2 text-sm opacity-0 hover:opacity-100 transition-opacity">
                             {project.description}
                         </div>
+
                     </motion.div>
                 ))}
+                <button
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className="fixed bottom-4 right-4 bg-[#662e9b] text-white p-2 rounded-full shadow-lg hover:bg-[#982aff] transition-all"
+                    title="Back to Top"
+                >
+                    ↑
+                </button>
             </div>
             {showModal && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
@@ -226,13 +234,6 @@ const Design = () => {
                     </div>
                 </div>
             )}
-            <button
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="fixed bottom-4 right-4 bg-[#662e9b] text-white p-2 rounded-full shadow-lg hover:bg-[#982aff] transition-all"
-                title="Back to Top"
-            >
-                ↑
-            </button>
         </div>
     );
 };
