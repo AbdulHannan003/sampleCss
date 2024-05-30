@@ -182,7 +182,7 @@ const Design = () => {
                     Branding
                 </button>
             </div>
-            <div className='w-full grid gap-4 md:grid-cols-3 md:gap-8 mt-8 px-4 border'>
+            <div className='w-full grid gap-4 md:grid-cols-3 md:gap-8 mt-8 px-4'>
                 {projectData.map((project, index) => (
                     <motion.div
                         whileHover={{ scale: 1.05 }}
