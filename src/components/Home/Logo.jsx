@@ -16,13 +16,13 @@ import portfolio3 from '../../assets/PortfolioLogos/logotemp6.png';
 import portfolio4 from '../../assets/PortfolioWeb/web3.png';
 
 const logos = [
-    { src: ai, alt: "Adobe Illustrator logo", label: "Illustrator" },
+    { src: ai, alt: "React logo", label: "React" },
     { src: css, alt: "CSS logo", label: "CSS" },
     { src: html5, alt: "HTML5 logo", label: "HTML5" },
     { src: mongo, alt: "MongoDB logo", label: "MongoDB" },
     { src: node, alt: "Node.js logo", label: "Node JS" },
     { src: ps, alt: "Photoshop logo", label: "Photoshop" },
-    { src: reactLogo, alt: "React logo", label: "React" },
+    { src: reactLogo, alt: "Adobe Illustrator logo", label: "Illustrator" },
     { src: tailwind, alt: "Tailwind CSS logo", label: "Tailwind CSS" },
 ];
 
