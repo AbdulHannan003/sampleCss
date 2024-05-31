@@ -16,7 +16,7 @@ import ps from '../../assets/logos/ps.webp';
 
 const toolsData = [
     { src: bs, alt: "Bootstrap logo", label: "Bootstrap" },
-    { src: react, alt: "Adobe Illustrator logo ", label: "Illustrator" },
+    { src: ai, alt: "React logo", label: "React" },
     { src: tw, alt: "Tailwind logo", label: "Tailwind" },
     { src: np, alt: "Numpy logo", label: "Numpy" },
     { src: xl, alt: "Openpyxl logo", label: "Openpyxl" },
@@ -24,7 +24,7 @@ const toolsData = [
     { src: js, alt: "Javascript logo", label: "Javascript" },
     { src: html, alt: "HTML5 logo", label: "HTML5" },
     { src: py, alt: "Python logo", label: "Python" },
-    { src: ai, alt: "React logo", label: "React" },
+    { src: react, alt: "Adobe Illustrator logo", label: "Illustrator" },
     { src: figma, alt: "Figma logo", label: "Figma" },
     { src: ps, alt: "Photoshop logo", label: "Photoshop" },
 ];
