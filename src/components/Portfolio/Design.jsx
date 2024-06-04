@@ -127,7 +127,7 @@ const Design = () => {
     }
 
     return (
-        <div className='w-full border border-[#662e9b] bg-gradient-to-r from-[#662e9b] to-[#982aff] relative'>
+        <div className='w-full border border-[#662e9b] bg-gradient-to-r from-[#662e9b] to-[#982aff]'>
             <div className="max-w-[1240px] text-center p-0 mx-auto md:my-10 md:flex">
                 <div className="my-auto text-white-100 md:flex -rotate-[-90deg] text-6xl md:text-6xl font-serif font-bold col-span-1 w-1/4 md:h-[50px] overflow-visible hidden">
                     {letters1.map((letter, index) => (
@@ -141,7 +141,7 @@ const Design = () => {
                         </motion.span>
                     ))}
                 </div>
-                <div className="text-center p-2 col-span-1 mx-auto w-2/4 md:w-10/12">
+                <div className="text-center p-2 col-span-1 mx-auto w-4/4 md:w-10/12">
                     <h1 className="text-center py-4 md:text-4xl text-xl font-bold text-white-100">
                         Have a look at our work for our customers
                     </h1>
@@ -187,7 +187,7 @@ const Design = () => {
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         key={index}
-                        className='overflow-hidden rounded-md shadow-lg relative'>
+                        className='overflow-hidden rounded-md shadow-lg'>
                         <img
                             src={project.urlJpg}
                             alt={project.alt}
@@ -213,7 +213,7 @@ const Design = () => {
             </div>
             {showModal && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-                    <div className="max-w-screen-lg overflow-hidden relative">
+                    <div className="max-w-screen-lg overflow-hidden">
                         <button className="absolute top-4 right-4 text-white text-2xl focus:outline-none" onClick={closeModal}>
                             &times;
                         </button>
