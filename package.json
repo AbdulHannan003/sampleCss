@@ -1,7 +1,7 @@
 {
-  "name": "samplecss",
+  "name": "saska-solutions",
   "private": true,
-  "version": "0.0.0",
+  "version": "beta",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",
+    "firebase": "^10.12.1",
     "framer-motion": "^11.2.0",
     "react": "^18.2.0",
     "react-confirm-alert": "^3.0.6",
